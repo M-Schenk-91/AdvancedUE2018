@@ -1,0 +1,214 @@
+{
+  "categories": 
+  [
+    {
+    "categoryName": "Sport",
+    "subcategories": [
+      {
+        "subcategoryName": "Fußball",
+        "sites": [
+          "bundesliga",
+          "spox",
+          "kicker",
+          "sportbild",
+          "Cristiano"
+        ]
+      },
+      {
+        "subcategoryName": "Basketball",
+        "sites": [
+          "basketballforever",
+          "nikebasketball",
+          "nba",
+          "basketballbundesliga",
+          "KingJames"
+        ]
+      },
+      {
+        "subcategoryName": "Handball",
+        "sites": [
+          "DKBHBL",
+          "EHF",
+          "kicker",
+          "sportbild"
+        ]
+      },
+      {
+        "subcategoryName": "Automobilrennsport",
+        "sites": [
+          "bundesliga",
+          "spox",
+          "kicker",
+          "sportbild"
+        ]
+      }
+      ]
+    },
+    {
+      "categoryName": "Musik",
+      "subcategories": [
+        {
+          "subcategory": "Pop",
+          "sites": [
+
+        ]
+        },
+        {
+          "subcategory": "Allgemein",
+          "sites": [
+    
+          ]
+        },
+        {
+          "subcategory": "Eigene Musik",
+          "sites": [
+      
+          ]
+        }
+      ]
+    },
+    {
+      "categoryName": "Nachrichten",
+      "subcategories": [
+        {
+          "subcategory": "Politik",
+          "sites": [
+
+          ]
+        },
+        {
+          "subcategory": "Sport",
+          "sites": [
+
+          ]
+        },
+        {
+          "subcategory": "Musik",
+          "sites": [
+
+          ]
+        },
+        {
+          "subcategory": "Life Style",
+          "sites": [
+
+          ]
+        },
+        {
+          "subcategory": "Allgemein",
+          "sites": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "categoryName": "Politik",
+      "subcategories": [
+        {
+          "subcategory": "US",
+          "sites": [
+            "BarackObama",
+            "realDonaldTrump"
+
+          ]
+        },
+        {
+          "subcategory": "Die Linke",
+          "sites": [
+
+          ]
+        }
+        ,{
+          "subcategory": "AfD",
+          "sites": [
+
+          ]
+        }
+        ,{
+          "subcategory": "Die Grünen",
+          "sites": [
+
+          ]
+        }
+        ,{
+          "subcategory": "CDU / CSU",
+          "sites": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "categoryName": "Promis",
+      "subcategories": [
+        {
+          "subcategory": "",
+          "sites": [
+
+          ]
+        },
+        {
+          "subcategory": "",
+          "sites": [
+
+          ]
+        },
+        {
+          "subcategory": "",
+          "sites": [
+
+          ]
+        },
+        {
+          "subcategory": "",
+          "sites": [
+
+          ]
+        },
+        {
+          "subcategory": "",
+          "sites": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "categoryName": "Fun",
+      "subcategories": [
+        {
+          "subcategory": "",
+          "sites": [
+
+          ]
+        },
+        {
+          "subcategory": "",
+          "sites": [
+
+          ]
+        },
+        {
+          "subcategory": "",
+          "sites": [
+
+          ]
+        },
+        {
+          "subcategory": "",
+          "sites": [
+
+          ]
+        },
+        {
+          "subcategory": "",
+          "sites": [
+
+          ]
+        }
+      ]
+    }
+  ]
+
+}
