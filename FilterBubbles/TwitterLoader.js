@@ -2,13 +2,14 @@ const EventEmitter = require('events');
 class MyEmitter extends EventEmitter {}
 const myEmitter = new MyEmitter();
 
+require('dotenv').config();
 
 var Twitter = require('twitter');
 var client = new Twitter({
-	consumer_key: 'KqBbt3SnPySp6on7HWXsjVIaY',
-	consumer_secret: 'rZbCnAOti9J9Kg2XnmYuxn9muispZZzPGgYOvRXLKRnRBPdRup',
-	access_token_key: '1005481241657868288-LmwUy4OKe9BGyS1nTF4NNNbtwMonTC',
-	access_token_secret: '4UJt0UMcUusQVTUWyL3gIxAlfragvcXlXBMZbSCFxZ6yl'
+  consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
 
 module.exports = {
