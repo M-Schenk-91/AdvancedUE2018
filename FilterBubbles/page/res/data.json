@@ -1,219 +1,229 @@
 {
-  "categories": 
-  [
-    {
-    "categoryName": "Sport",
-    "subcategories": [
-      {
-        "subcategoryName": "Fußball",
-        "sites": [
-          "Bundesliga_DE",
-          "spox",
-          "kicker",
-          "sportbild",
-          "Cristiano"
-        ]
-      },
-      {
-        "subcategoryName": "Basketball",
-        "sites": [
-          "basketballforever",
-          "nikebasketball",
-          "nba",
-          "DBB_Basketball",
-          "KingJames"
-        ]
-      },
-      {
-        "subcategoryName": "Handball",
-        "sites": [
-          "DKBHBL",
-          "EHF",
-          "thw_handball",
-          "DHB_Teams"
-        ]
-      },
-      {
-        "subcategoryName": "Automobilrennsport",
-        "sites": [
-          "f1",
-          "formel1_DE",
-          "eFORMELde",
-          "PorscheRaces",
-          "ScuderiaFerrari",
-          "MercedesAMGF1",
-          "redbullracing",
-          "FIA_F2",
-          "fiaf3europe"
-        ]
-      }
-      ]
-    },
-    {
-      "categoryName": "Musik",
-      "subcategories": [
+    "categories": [
         {
-          "subcategory": "Pop",
-          "sites": [
-
-        ]
+            "categoryName": "Sport",
+            "subcategories": [
+                {
+                    "subcategoryName": "Fußball",
+                    "sites": [
+                        "Bundesliga_DE",
+                        "spox",
+                        "kicker",
+                        "sportbild",
+                        "Cristiano"
+                    ]
+                },
+                {
+                    "subcategoryName": "Basketball",
+                    "sites": [
+                        "basketballforever",
+                        "nikebasketball",
+                        "nba",
+                        "DBB_Basketball",
+                        "KingJames"
+                    ]
+                },
+                {
+                    "subcategoryName": "Handball",
+                    "sites": [
+                        "DKBHBL",
+                        "EHF",
+                        "thw_handball",
+                        "DHB_Teams"
+                    ]
+                },
+                {
+                    "subcategoryName": "Automobilrennsport",
+                    "sites": [
+                        "f1",
+                        "formel1_DE",
+                        "eFORMELde",
+                        "PorscheRaces",
+                        "ScuderiaFerrari",
+                        "MercedesAMGF1",
+                        "redbullracing",
+                        "FIA_F2",
+                        "fiaf3europe"
+                    ]
+                }
+            ]
         },
         {
-          "subcategory": "Allgemein",
-          "sites": [
-    
-          ]
+            "categoryName": "Musik",
+            "subcategories": [
+                {
+                    "subcategory": "Pop",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Rock",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Eigene Musik / Amateure",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Hiphop / Rap",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Klassik (Konzerte)",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Sonstige",
+                    "sites": []
+                }
+            ]
         },
         {
-          "subcategory": "Eigene Musik / Amateure",
-          "sites": [
-      
-          ]
+            "categoryName": "Nachrichten",
+            "subcategories": [
+                {
+                    "subcategory": "Politik",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Sport",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Musik",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Lifestyle",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Allgemein",
+                    "sites": []
+                }
+            ]
+        },
+        {
+            "categoryName": "Politik",
+            "subcategories": [
+                {
+                    "subcategory": "US",
+                    "sites": [
+                        "BarackObama",
+                        "realDonaldTrump"
+                    ]
+                },
+                {
+                    "subcategory": "Die Linke",
+                    "sites": []
+                },
+                {
+                    "subcategory": "AfD",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Die Grünen",
+                    "sites": []
+                },
+                {
+                    "subcategory": "CDU",
+                    "sites": []
+                },
+                {
+                    "subcategory": "CSU",
+                    "sites": []
+                },
+                {
+                    "subcategory": "SPD",
+                    "sites": []
+                },
+                {
+                    "subcategory": "FDP",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Digitales",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Umwelt",
+                    "sites": []
+                }
+            ]
+        },
+        {
+            "categoryName": "Lifestyle/Promis",
+            "subcategories": [
+                {
+                    "subcategory": "",
+                    "sites": []
+                },
+                {
+                    "subcategory": "",
+                    "sites": []
+                },
+                {
+                    "subcategory": "",
+                    "sites": []
+                },
+                {
+                    "subcategory": "",
+                    "sites": []
+                },
+                {
+                    "subcategory": "",
+                    "sites": []
+                }
+            ]
+        },
+        {
+            "categoryName": "Games",
+            "subcategories": [
+                {
+                    "subcategory": "Shooter",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Strategie",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Rollenspiele",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Sport-/ und Rennspiele",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Sonstige",
+                    "sites": []
+                }
+            ]
+        },
+        {
+            "categoryName": "Fun",
+            "subcategories": [
+                {
+                    "subcategory": "",
+                    "sites": []
+                },
+                {
+                    "subcategory": "",
+                    "sites": []
+                },
+                {
+                    "subcategory": "",
+                    "sites": []
+                },
+                {
+                    "subcategory": "",
+                    "sites": []
+                },
+                {
+                    "subcategory": "",
+                    "sites": []
+                }
+            ]
         }
-      ]
-    },
-    {
-      "categoryName": "Nachrichten",
-      "subcategories": [
-        {
-          "subcategory": "Politik",
-          "sites": [
-
-          ]
-        },
-        {
-          "subcategory": "Sport",
-          "sites": [
-
-          ]
-        },
-        {
-          "subcategory": "Musik",
-          "sites": [
-
-          ]
-        },
-        {
-          "subcategory": "Lifestyle",
-          "sites": [
-
-          ]
-        },
-        {
-          "subcategory": "Allgemein",
-          "sites": [
-
-          ]
-        }
-      ]
-    },
-    {
-      "categoryName": "Politik",
-      "subcategories": [
-        {
-          "subcategory": "US",
-          "sites": [
-            "BarackObama",
-            "realDonaldTrump"
-
-          ]
-        },
-        {
-          "subcategory": "Die Linke",
-          "sites": [
-
-          ]
-        }
-        ,{
-          "subcategory": "AfD",
-          "sites": [
-
-          ]
-        }
-        ,{
-          "subcategory": "Die Grünen",
-          "sites": [
-
-          ]
-        }
-        ,{
-          "subcategory": "CDU / CSU",
-          "sites": [
-
-          ]
-        }
-      ]
-    },
-    {
-      "categoryName": "Lifestyle/Promis",
-      "subcategories": [
-        {
-          "subcategory": "",
-          "sites": [
-
-          ]
-        },
-        {
-          "subcategory": "",
-          "sites": [
-
-          ]
-        },
-        {
-          "subcategory": "",
-          "sites": [
-
-          ]
-        },
-        {
-          "subcategory": "",
-          "sites": [
-
-          ]
-        },
-        {
-          "subcategory": "",
-          "sites": [
-
-          ]
-        }
-      ]
-    },
-    {
-      "categoryName": "Fun",
-      "subcategories": [
-        {
-          "subcategory": "",
-          "sites": [
-
-          ]
-        },
-        {
-          "subcategory": "",
-          "sites": [
-
-          ]
-        },
-        {
-          "subcategory": "",
-          "sites": [
-
-          ]
-        },
-        {
-          "subcategory": "",
-          "sites": [
-
-          ]
-        },
-        {
-          "subcategory": "",
-          "sites": [
-
-          ]
-        }
-      ]
-    }
-  ]
-
+    ]
 }
