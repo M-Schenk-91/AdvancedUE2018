@@ -7,7 +7,7 @@
       {
         "subcategoryName": "Fußball",
         "sites": [
-          "bundesliga",
+          "Bundesliga_DE",
           "spox",
           "kicker",
           "sportbild",
@@ -20,7 +20,7 @@
           "basketballforever",
           "nikebasketball",
           "nba",
-          "basketballbundesliga",
+          "DBB_Basketball",
           "KingJames"
         ]
       },
@@ -29,17 +29,22 @@
         "sites": [
           "DKBHBL",
           "EHF",
-          "kicker",
-          "sportbild"
+          "thw_handball",
+          "DHB_Teams"
         ]
       },
       {
         "subcategoryName": "Automobilrennsport",
         "sites": [
-          "bundesliga",
-          "spox",
-          "kicker",
-          "sportbild"
+          "f1",
+          "formel1_DE",
+          "eFORMELde",
+          "PorscheRaces",
+          "ScuderiaFerrari",
+          "MercedesAMGF1",
+          "redbullracing",
+          "FIA_F2",
+          "fiaf3europe"
         ]
       }
       ]
@@ -60,7 +65,7 @@
           ]
         },
         {
-          "subcategory": "Eigene Musik",
+          "subcategory": "Eigene Musik / Amateure",
           "sites": [
       
           ]
@@ -89,7 +94,7 @@
           ]
         },
         {
-          "subcategory": "Life Style",
+          "subcategory": "Lifestyle",
           "sites": [
 
           ]
@@ -140,7 +145,7 @@
       ]
     },
     {
-      "categoryName": "Promis",
+      "categoryName": "Lifestyle/Promis",
       "subcategories": [
         {
           "subcategory": "",
