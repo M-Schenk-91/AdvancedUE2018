@@ -84,53 +84,126 @@
                     "subcategory": "US",
                     "sites": [
                         "BarackObama",
-                        "realDonaldTrump"
+                        "realDonaldTrump",
+                        "WhiteHouse"
                     ]
                 },
                 {
                     "subcategory": "Weltweit",
-                    "sites": []
+                    "sites": [
+                        "narendramodi",
+                        "realDonaldTrump",
+                        "AngelaMerkeICDU",
+                        "EmmanuelMacron",
+                        "10DowningStreet",
+                        "EU_Commission",
+                        "mfa_russia",
+                        "PutinRF_Eng",
+                        "WPReview"
+                    ]
                 },
                 {
                     "subcategory": "Die Linke",
-                    "sites": []
+                    "sites": [
+                        "dieLinke",
+                        "Linksfraktion",
+                        "katjakipping",
+                        "SWagenknecht",
+                        "LINKE_Bayern",
+                        "b_riexinger"
+                    ]
                 },
                 {
                     "subcategory": "AfD",
-                    "sites": []
+                    "sites": [
+                        "AfD_Bund",
+                        "AfD_Bayern",
+                        "AfDKompakt",
+                        "AfD",
+                        "Joerg_Meuthen",
+                        "Alice_Weidel"
+                    ]
                 },
                 {
                     "subcategory": "Die Grünen",
-                    "sites": []
+                    "sites": [
+                        "Die_Gruenen",
+                        "gruene_jugend",
+                        "Gruene_Bayern",
+                        "GoeringEckardt",
+                        "cem_oezdemir",
+                        "GrueneLandtagBY",
+                        "ToniHofreiter",
+                        "ToniHofreiter",
+                        "RobertHabeck"
+                    ]
                 },
                 {
                     "subcategory": "CDU",
-                    "sites": []
+                    "sites": [
+                        "CDU",
+                        "cducsubt",
+                        "AngelaMerkeICDU"
+                    ]
                 },
                 {
                     "subcategory": "CSU",
-                    "sites": []
+                    "sites": [
+                        "cducsubt",
+                        "CSU",
+                        "Markus_Soeder",
+                        "csu_lt"
+                    ]
                 },
                 {
                     "subcategory": "SPD",
-                    "sites": []
+                    "sites": [
+                        "spdde",
+                        "BayernSPD",
+                        "spdbt",
+                        "jusos",
+                        "OlafScholz",
+                        "BayernSPD_Lndtg",
+                        "m_rinderspacher"
+                    ]
                 },
                 {
                     "subcategory": "FDP",
-                    "sites": []
+                    "sites": [
+                        "fdp",
+                        "c_lindner",
+                        "fdpbay",
+                        "fdpbt",
+                        "DFoest"
+                    ]
                 },
                 {
                     "subcategory": "Digitales",
-                    "sites": []
+                    "sites": [
+                        "Piratenpartei",
+                        "PiratenRGB",
+                        "politik_digital",
+                        "Digital_Bund"
+                    ]
                 },
                 {
                     "subcategory": "Umwelt",
-                    "sites": []
+                    "sites": [
+                        "Fairtrade_DE",
+                        "greenpeace_de",
+                        "bund_net",
+                        "BUNDjugend",
+                        "bmu"
+
+                    ]
                 },
                 {
                     "subcategory": "Wirtschaft",
                     "sites": [
-                        "insm"
+                        "insm",
+                        "WirtschaftDE",
+                        "wiwo",
+                        "BMWi_Bund"
                     ]
                 }
             ]
