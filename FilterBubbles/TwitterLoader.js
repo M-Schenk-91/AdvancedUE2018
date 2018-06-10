@@ -21,7 +21,10 @@ module.exports = {
 		console.log("TwitterLoader loading twitter feeds of: " + pages);
 
 		var path = "statuses/user_timeline";
+
 		var lstPagesToLoad = pages.split("&");
+
+		console.log(lstPagesToLoad);
 
 		var pageCountMax = lstPagesToLoad.length;
 		var pageCount = 0;
@@ -42,7 +45,7 @@ module.exports = {
 
 				if(pageCount >= pageCountMax){
 					serverResponse.send(JSON.stringify(lstTweetsOfAllFeeds));
-					console.log(lstTweetsOfAllFeeds);
+					//console.log(lstTweetsOfAllFeeds);
 				}
 
 				//myEmitter.emit('twitterFeedLoaded', tweets);

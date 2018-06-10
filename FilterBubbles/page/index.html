@@ -1,21 +1,57 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Feed loader test</title>
+	<title>FilterBubbles</title>
+	<link rel="stylesheet" type="text/css" href="twittertemplate.css">
 </head>
 <body>
-<!--	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
-<script src="Facebook.js"></script>
-<div id="container" style="width:200px;height: 200px;max-width: 200px;max-height: 200px"></div>
-<div id="container2" style="width:200px;height: 200px;margin-left: 300px"></div>
--->
 
-<script src="TwitterReceiver.js"></script>
-<script src="Main.js"></script>
+	<div id="twitterFeed">
+		<ul id="listTwitterFeed">
 
-</body>
-</html>
+		</ul>
+	</div>
+
+
+
+
+
+
+
+	<template id="twitter-template">
+		<div class="tw-block-parent">
+			<div class="timeline-TweetList-tweet">
+				<div class="timeline-Tweet">
+					<div class="timeline-Tweet-brand">
+						<div class="Icon Icon--twitter"></div>
+					</div>
+					<div class="timeline-Tweet-author">
+						<div class="TweetAuthor"><a class="TweetAuthor-link" href="#channel"> </a><span class="TweetAuthor-avatar"> 
+							<img class="Avatar"> </img></span><span class="TweetAuthor-name">TwitterDev </span><span class="Icon Icon--verified"> </span><span class="TweetAuthor-screenName">@TwitterDev </span></div>
+						</div>
+						<div class="timeline-Tweet-text">We're excited for the inaugural Twitter Community Meetup<a href="#">@TwitterSeattle </a><span>tomorrow! </span><a href="#">#TapIntoTwitter </a><a href="#">meetup.com/Seattle-Twitte… </a>
+						</div>
+
+						<div id="timeline-Tweet-img-container">
+							<img class="timeline-Tweet-img">
+						</div>
+
+
+						<div class="timeline-Tweet-metadata"><span class="timeline-Tweet-timestamp">9h</span></div>
+						<ul class="timeline-Tweet-actions">
+							<li class="timeline-Tweet-action"><a class="Icon Icon--heart" href="#"></a></li>
+							<li class="timeline-Tweet-action"><a class="Icon Icon--share" href="#"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</template>
+
+		<script src="TwitterReceiver.js"></script>
+		<script src="TwitterUtils.js"></script>
+
+	</body>
+	</html>
 
 
 
