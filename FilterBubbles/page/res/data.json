@@ -53,27 +53,60 @@
             "subcategories": [
                 {
                     "subcategory": "Politik",
-                    "sites": []
+                    "sites": [
+                        "zeitonline_pol",
+                        "WELT_Politik",
+                        "Politiknews_org",
+                        "SPIEGEL_Politik",
+                        "dw_politik",
+                        "BILD_Politik"
+                    ]
                 },
                 {
                     "subcategory": "Sport",
-                    "sites": []
+                    "sites": [
+                        "TwitterSports",
+                        "srfsport",
+                        "BILD_Sport",
+                        "BBCSport",
+                        "spox"
+                    ]
                 },
                 {
                     "subcategory": "Lifestyle",
-                    "sites": []
+                    "sites": [
+                        "lifestyle_fit",
+                        "FoxNewsLife"
+                    ]
                 },
                 {
                     "subcategory": "Regional",
-                    "sites": []
+                    "sites": [
+                        "Regensburg",
+                        "mz_regensburg",
+                        "SZ_Bayern",
+                        "wochenblattR"
+                    ]
                 },
                 {
                     "subcategory": "Technologie",
-                    "sites": []
+                    "sites": [
+                        "ReutersTech",
+                        "nytimesbits",
+                        "ForbesTech",
+                        "technology",
+                        "DigitalTrends"
+                    ]
                 },
                 {
                     "subcategory": "Wirtschaft",
-                    "sites": []
+                    "sites": [
+                        "WirtschaftNews",
+                        "wiwo",
+                        "BW",
+                        "TheEconomist",
+                        "Forbes"
+                    ]
                 }
             ]
         },
@@ -379,7 +412,9 @@
                 },
                 {
                     "subcategory": "Nachrichten",
-                    "sites": []
+                    "sites": [
+                        "DigitalTrends"
+                    ]
                 }
             ]
         },
