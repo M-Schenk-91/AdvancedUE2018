@@ -19,7 +19,11 @@ function twitterReceiever() {
 
 	onTwitterFeedReceived = function(response) {
 		//DATA LOADED
-		console.log(JSON.parse(response));
+		var feed =  JSON.parse(response);
+		//console.log(feed);
+
+		var evt = new CustomEvent('twitterfeedreceived', { detail: feed });
+		window.dispatchEvent(evt);
 	},
 
 	init = function() {
