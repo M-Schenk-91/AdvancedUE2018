@@ -49,35 +49,6 @@
             ]
         },
         {
-            "categoryName": "Musik",
-            "subcategories": [
-                {
-                    "subcategory": "Pop",
-                    "sites": []
-                },
-                {
-                    "subcategory": "Rock",
-                    "sites": []
-                },
-                {
-                    "subcategory": "Eigene Musik / Amateure",
-                    "sites": []
-                },
-                {
-                    "subcategory": "Hiphop / Rap",
-                    "sites": []
-                },
-                {
-                    "subcategory": "Klassik (Konzerte)",
-                    "sites": []
-                },
-                {
-                    "subcategory": "Sonstige",
-                    "sites": []
-                }
-            ]
-        },
-        {
             "categoryName": "Nachrichten",
             "subcategories": [
                 {
@@ -89,15 +60,19 @@
                     "sites": []
                 },
                 {
-                    "subcategory": "Musik",
-                    "sites": []
-                },
-                {
                     "subcategory": "Lifestyle",
                     "sites": []
                 },
                 {
-                    "subcategory": "Allgemein",
+                    "subcategory": "Regional",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Technologie",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Wirtschaft",
                     "sites": []
                 }
             ]
@@ -111,6 +86,10 @@
                         "BarackObama",
                         "realDonaldTrump"
                     ]
+                },
+                {
+                    "subcategory": "Weltweit",
+                    "sites": []
                 },
                 {
                     "subcategory": "Die Linke",
@@ -147,30 +126,40 @@
                 {
                     "subcategory": "Umwelt",
                     "sites": []
+                },
+                {
+                    "subcategory": "Wirtschaft",
+                    "sites": [
+                        "insm"
+                    ]
                 }
             ]
         },
         {
-            "categoryName": "Lifestyle/Promis",
+            "categoryName": "Lifestyle",
             "subcategories": [
                 {
-                    "subcategory": "",
+                    "subcategory": "Promis",
                     "sites": []
                 },
                 {
-                    "subcategory": "",
+                    "subcategory": "Health",
                     "sites": []
                 },
                 {
-                    "subcategory": "",
+                    "subcategory": "Shopping",
                     "sites": []
                 },
                 {
-                    "subcategory": "",
+                    "subcategory": "Fitness",
                     "sites": []
                 },
                 {
-                    "subcategory": "",
+                    "subcategory": "DIY",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Reisen",
                     "sites": []
                 }
             ]
@@ -201,26 +190,147 @@
             ]
         },
         {
-            "categoryName": "Fun",
+            "categoryName": "Food",
             "subcategories": [
                 {
-                    "subcategory": "",
+                    "subcategory": "Vegan",
                     "sites": []
                 },
                 {
-                    "subcategory": "",
+                    "subcategory": "Vegetarisch",
                     "sites": []
                 },
                 {
-                    "subcategory": "",
+                    "subcategory": "Kochen",
                     "sites": []
                 },
                 {
-                    "subcategory": "",
+                    "subcategory": "Restaurants",
+                    "sites": []
+                }
+            ]
+        },
+        {
+            "categoryName": "Wissenschaft",
+            "subcategories": [
+                {
+                    "subcategory": "Weltraum",
                     "sites": []
                 },
                 {
-                    "subcategory": "",
+                    "subcategory": "Medizin",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Forschung",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Physik",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Universitäten",
+                    "sites": []
+                }
+            ]
+        },
+        {
+            "categoryName": "Fashion",
+            "subcategories": [
+                {
+                    "subcategory": "Accessories",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Schmuck",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Styling / Kosmetik",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Schuhe",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Taschen",
+                    "sites": []
+                }
+            ]
+        },
+        {
+            "categoryName": "Wirtschaft",
+            "subcategories": [
+                {
+                    "subcategory": "Blogger / Nachrichten",
+                    "sites": [
+                        "Schuldensuehner",
+                        "EuroBriefing",
+                        "LukasSustala"
+                    ]
+                },
+                {
+                    "subcategory": "Marketing",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Consulting",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Finanzen",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Unternehmer",
+                    "sites": []
+                }
+            ]
+        },
+        {
+            "categoryName": "Technology",
+            "subcategories": [
+                {
+                    "subcategory": "Gadgets",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Hardware",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Developers",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Nachrichten",
+                    "sites": []
+                }
+            ]
+        },
+        {
+            "categoryName": "Art",
+            "subcategories": [
+                {
+                    "subcategory": "Design",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Musik",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Architektur",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Poesie",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Schauspiel / Filme",
                     "sites": []
                 }
             ]
