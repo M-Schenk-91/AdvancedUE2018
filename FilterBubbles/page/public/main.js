@@ -19,6 +19,12 @@ var MainContent = Vue.component('main-content', {
     template: '<div class="col-10 h-100 bg-light"><div class="chart-example" id="chart"><svg></svg></div></div>',
     props: ['categories', 'checkedCategories'],
     watch: {
+        categories: function() {
+            this.data = this.mapCategoriesToBubbles(this.categories, this.checkedCategories);
+            var chart = bubbleChart().width(600).height(400);
+            d3.select('#chart').datum(this.data).call(chart);
+            return;
+        },
         checkedCategories: function () {
             this.data = this.mapCategoriesToBubbles(this.categories, this.checkedCategories);
             var chart = bubbleChart().width(600).height(400);
