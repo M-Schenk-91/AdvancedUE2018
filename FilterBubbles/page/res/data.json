@@ -242,57 +242,58 @@
             ]
         },
         {
-            "categoryName": "Lifestyle",
-            "subcategories": [
-                {
-                    "subcategory": "Promis",
-                    "sites": []
-                },
-                {
-                    "subcategory": "Health",
-                    "sites": []
-                },
-                {
-                    "subcategory": "Shopping",
-                    "sites": []
-                },
-                {
-                    "subcategory": "Fitness",
-                    "sites": []
-                },
-                {
-                    "subcategory": "DIY",
-                    "sites": []
-                },
-                {
-                    "subcategory": "Reisen",
-                    "sites": []
-                }
-            ]
-        },
-        {
             "categoryName": "Games",
             "subcategories": [
                 {
                     "subcategory": "Shooter",
-                    "sites": []
+                    "sites": [
+                        "Battlefield",
+                        "CallofDuty",
+                        "csgo_dev"
+                    ]
                 },
                 {
                     "subcategory": "Strategie",
-                    "sites": []
+                    "sites": [
+                        "StarCraft",
+                        "AgeOfEmpires",
+                        "greygoogame"
+                    ]
                 },
                 {
                     "subcategory": "Rollenspiele",
-                    "sites": []
+                    "sites": [
+                        "Warcraft",
+                        "witchergame",
+                        "larianstudios",
+                        "WorldofEternity"
+                    ]
                 },
                 {
                     "subcategory": "Sport-/ und Rennspiele",
-                    "sites": []
+                    "sites": [
+                        "NeedforSpeed",
+                        "ForzaMotorsport",
+                        "EASPORTSFIFA",
+                        "NBA2K"
+                    ]
+                },
+                {
+                    "subcategory": "E-Sport",
+                    "sites": [
+                        "ESL",
+                        "lolesports",
+                        "Blizzard_Ent"
+                    ]
                 },
                 {
                     "subcategory": "Sonstige",
-                    "sites": []
+                    "sites": [
+                        "FortniteGame",
+                        "PUBG"
+                    ]
                 }
+
             ]
         },
         {
@@ -300,19 +301,28 @@
             "subcategories": [
                 {
                     "subcategory": "Vegan",
-                    "sites": []
+                    "sites": [
+                        "vegan",
+                        "vgn_at",
+                        "ThankTankCr8"
+                    ]
                 },
                 {
                     "subcategory": "Vegetarisch",
-                    "sites": []
+                    "sites": [
+                        "CleanEatingMag",
+                        "VegTimes",
+                        "VegetarianTasty",
+                        "kochenoknochen"
+                    ]
                 },
                 {
                     "subcategory": "Kochen",
-                    "sites": []
-                },
-                {
-                    "subcategory": "Restaurants",
-                    "sites": []
+                    "sites": [
+                        "leckerkochennet",
+                        "waskocheich",
+                        "chefkochde"
+                    ]
                 }
             ]
         },
@@ -321,23 +331,29 @@
             "subcategories": [
                 {
                     "subcategory": "Weltraum",
-                    "sites": []
+                    "sites": [
+                        "NASA",
+                        "ESA_de",
+                        "SpaceX"              
+                    ]
                 },
                 {
                     "subcategory": "Medizin",
-                    "sites": []
+                    "sites": [
+                        "SpringerMed"
+                    ]
                 },
                 {
                     "subcategory": "Forschung",
-                    "sites": []
+                    "sites": [
+                        "nature"
+                    ]
                 },
                 {
                     "subcategory": "Physik",
-                    "sites": []
-                },
-                {
-                    "subcategory": "Universitäten",
-                    "sites": []
+                    "sites": [
+                        "CERN"
+                    ]
                 }
             ]
         },
@@ -379,19 +395,30 @@
                 },
                 {
                     "subcategory": "Marketing",
-                    "sites": []
+                    "sites": [
+                        "MarketingEds",
+                        "MKRedaktion",
+                        "Horizont"
+                    ]
                 },
                 {
                     "subcategory": "Consulting",
-                    "sites": []
+                    "sites": [
+                        "AccentureConslt",
+                        "BW",
+                        "TheEconomist",
+                        "McKinsey",
+                        "Gartner_inc"
+                    ]
                 },
                 {
                     "subcategory": "Finanzen",
-                    "sites": []
-                },
-                {
-                    "subcategory": "Unternehmer",
-                    "sites": []
+                    "sites": [
+                        "Kiplinger",
+                        "barronsonline",
+                        "FortuneMagazine",
+                        "IBDinvestors"
+                    ]
                 }
             ]
         },
@@ -400,20 +427,38 @@
             "subcategories": [
                 {
                     "subcategory": "Gadgets",
-                    "sites": []
+                    "sites": [
+                        "kickstarter",
+                        "Indiegogo",
+                        "Gadgets360",
+                        "gadgets"
+                    ]
                 },
                 {
                     "subcategory": "Hardware",
-                    "sites": []
+                    "sites": [
+                        "intel",
+                        "AMD",
+                        "nvidia",
+                        "Radeon",
+                        "PCGH_Redaktion",
+                        "hardwareluxx_de"
+                    ]
                 },
                 {
                     "subcategory": "Developers",
-                    "sites": []
+                    "sites": [
+                        "heisedc",
+                        "msdev_de",
+                        "googledevs"
+                    ]
                 },
                 {
                     "subcategory": "Nachrichten",
                     "sites": [
-                        "DigitalTrends"
+                        "DigitalTrends",
+                        "heiseonline",
+                        "golem"
                     ]
                 }
             ]
@@ -439,6 +484,31 @@
                 },
                 {
                     "subcategory": "Schauspiel / Filme",
+                    "sites": []
+                }
+            ]
+        },
+        {
+            "categoryName": "Lifestyle",
+            "subcategories": [
+                {
+                    "subcategory": "Health",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Shopping",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Fitness",
+                    "sites": []
+                },
+                {
+                    "subcategory": "DIY",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Reisen",
                     "sites": []
                 }
             ]
