@@ -40,6 +40,12 @@
  * @returns Chart function so that you can render the chart when ready
  */
 function bubbleChart() {
+
+    var twitter = twitterUtils();
+    twitter.init();
+
+
+
     var width = 960,
         height = 960,
         maxRadius = 6,
@@ -100,6 +106,26 @@ function bubbleChart() {
             })
             .attr('transform', 'translate(' + [width / 2, height / 2] + ')')
             .on("mouseover", function(d) {
+                tooltip.html(d[columnForColors] + "<br>" + d[columnForRadius] + " Seiten");
+                return tooltip.style("visibility", "visible");
+            })
+            .on("mousedown", function(d) {
+
+                console.log(d);
+                var queryString = "";
+
+                for (i = 0; i < d.category.length; i++) { 
+
+                    if(i != 0){
+                        queryString += "&";
+                    }
+
+                    queryString += d.category[i];
+
+                }               
+
+                twitter.loadTwitter(queryString);
+
                 tooltip.html(d[columnForColors] + "<br>" + d[columnForRadius] + " Seiten");
                 return tooltip.style("visibility", "visible");
             })

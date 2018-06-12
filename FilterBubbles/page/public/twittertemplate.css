@@ -1,9 +1,17 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic';
 
+.wrapper{
+
+}
+
+#app{
+		float:left;
+}
 
 #twitterFeed {
 	max-width: 400px;
-	margin-left: 500px;
+	min-width: 400px;
+	overflow-y: scroll
 }
 
 #listTwitterFeed{

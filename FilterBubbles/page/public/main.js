@@ -1,4 +1,17 @@
 Vue.config.productionTip = false;
+var twitterFeed = document.getElementById('listTwitterFeed');
+
+
+window.addEventListener('twittertemplatecreated', function (e) {
+    var txt = document.getElementById('text_no_twitter');
+    txt.style.display = "none";
+
+    for (i = 0; i < e.detail.length; i++) { 
+        twitterFeed.appendChild(e.detail[i]);
+
+    }
+
+});
 
 var Sidebar = Vue.component('sidebar', {
     template: '<div class="col-2 bg-dark h-100"><ul class="nav flex-column pt-5"><template v-for="category in categories"><li class="nav-item"><a class="nav-link active" data-toggle="collapse" :href="[\'#collapseCategory\' + category.categoryName]" role="button" aria-expanded="false" aria-controls="collapseCategory">{{category.categoryName}}</a></li><li class="nav-item collapse ml-2" :id="[\'collapseCategory\' + category.categoryName]"><form class="text-white ml-4"><div v-for="subCat in category.subcategories" v-bind:key="subCat.subcategoryName" class="form-group form-check"><input type="checkbox" class="form-check-input" :value="subCat.subcategoryName" @change="onChange" v-model="checkedCats" :id="[\'subCat\' + subCat.subcategoryName]"><label class="form-check-label" :for="[\'subCat\' + subCat.subcategoryName]">{{subCat.subcategoryName}}</label></div></form></li></template></ul></div>',
@@ -51,6 +64,7 @@ var MainContent = Vue.component('main-content', {
         },
         getMyBubble: function(cats, checkedCats) {
             let sites = []
+
             for (var c = 0; c < cats.length; c++) {
                 for (var s = 0; s < cats[c].subcategories.length; s++) {
                     for (var i = 0; i < checkedCats.length; i++) {
@@ -60,10 +74,11 @@ var MainContent = Vue.component('main-content', {
                     }
                 }
             }
+
             return {
                 title: 'Meine Bubble',
                 value: sites.length,
-                category: 'sites'
+                category: sites
             }
         },
         getOtherBubbles: function(cats, checkedCats) {
@@ -79,46 +94,46 @@ var MainContent = Vue.component('main-content', {
                     }
                     if(hasSubcatChecked) break
                 }
-                if (!hasSubcatChecked) {
-                    let sites = [];
-                    for (var s = 0; s < cats[c].subcategories.length; s++) {
-                        sites = sites.concat(cats[c].subcategories[s].sites)
-                    }
-                    let bubble = {
-                        title: cats[c].categoryName,
-                        value: sites.length,
-                        category: 'sites'
-                    };
-                    bubbles.push(bubble)
+            if (!hasSubcatChecked) {
+                let sites = [];
+                for (var s = 0; s < cats[c].subcategories.length; s++) {
+                    sites = sites.concat(cats[c].subcategories[s].sites)
                 }
-                hasSubcatChecked = false;
+                let bubble = {
+                    title: cats[c].categoryName,
+                    value: sites.length,
+                    category: sites
+                };
+                bubbles.push(bubble)
             }
-            return bubbles
-        },
+            hasSubcatChecked = false;
+        }
+        return bubbles
     },
+},
 });
 
 var App = Vue.component('app', {
-  template: '<div id="app" class="row container-fluid h-100"><sidebar v-on:catsChanged="onCatsChanged" :categories="categories"></sidebar><main-content :categories="categories" :checkedCategories="checkedCats"></main-content></div>',
+    template: '<div id="app" class="col-lg w-75 h-100"><div class="row container"><sidebar v-on:catsChanged="onCatsChanged" :categories="categories"></sidebar><main-content :categories="categories" :checkedCategories="checkedCats"></main-content></div></div>',
   components: {
     MainContent, Sidebar,
-  },
-  data: function() {
-      return {
-        categories: [],
-        checkedCats: [],
-      }
-    },
-    mounted() {
-        $.getJSON("./data.json", (json) => {
-            this.categories = json.categories;
-        });
-    },
-    methods: {
-      onCatsChanged: function(checkedCats) {
-        this.checkedCats = checkedCats;
-      },
-    },
+},
+data: function() {
+  return {
+    categories: [],
+    checkedCats: [],
+}
+},
+mounted() {
+    $.getJSON("./data.json", (json) => {
+        this.categories = json.categories;
+    });
+},
+methods: {
+  onCatsChanged: function(checkedCats) {
+    this.checkedCats = checkedCats;
+},
+},
 });
 
 new Vue({
