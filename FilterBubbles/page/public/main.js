@@ -3,8 +3,9 @@ var twitterFeed = document.getElementById('listTwitterFeed');
 
 
 window.addEventListener('twittertemplatecreated', function (e) {
-    var txt = document.getElementById('text_no_twitter');
-    txt.style.display = "none";
+    while (twitterFeed.firstChild) {
+        twitterFeed.removeChild(twitterFeed.firstChild);
+    }
 
     for (i = 0; i < e.detail.length; i++) { 
         twitterFeed.appendChild(e.detail[i]);
@@ -14,7 +15,7 @@ window.addEventListener('twittertemplatecreated', function (e) {
 });
 
 var Sidebar = Vue.component('sidebar', {
-    template: '<div class="col-2 bg-dark h-100"><ul class="nav flex-column pt-5"><template v-for="category in categories"><li class="nav-item"><a class="nav-link active" data-toggle="collapse" :href="[\'#collapseCategory\' + category.categoryName]" role="button" aria-expanded="false" aria-controls="collapseCategory">{{category.categoryName}}</a></li><li class="nav-item collapse ml-2" :id="[\'collapseCategory\' + category.categoryName]"><form class="text-white ml-4"><div v-for="subCat in category.subcategories" v-bind:key="subCat.subcategoryName" class="form-group form-check"><input type="checkbox" class="form-check-input" :value="subCat.subcategoryName" @change="onChange" v-model="checkedCats" :id="[\'subCat\' + subCat.subcategoryName]"><label class="form-check-label" :for="[\'subCat\' + subCat.subcategoryName]">{{subCat.subcategoryName}}</label></div></form></li></template></ul></div>',
+    template: '<div class="col-2 bg-dark h-100 nopadding"><ul class="nav flex-column pt-5"><template v-for="category in categories"><li class="nav-item"><a class="nav-link active" data-toggle="collapse" :href="[\'#collapseCategory\' + category.categoryName]" role="button" aria-expanded="false" aria-controls="collapseCategory">{{category.categoryName}}</a></li><li class="nav-item collapse ml-2" :id="[\'collapseCategory\' + category.categoryName]"><form class="text-white ml-4"><div v-for="subCat in category.subcategories" v-bind:key="subCat.subcategoryName" class="form-group form-check"><input type="checkbox" class="form-check-input" :value="subCat.subcategoryName" @change="onChange" v-model="checkedCats" :id="[\'subCat\' + subCat.subcategoryName]"><label class="form-check-label" :for="[\'subCat\' + subCat.subcategoryName]">{{subCat.subcategoryName}}</label></div></form></li></template></ul></div>',
     props: ['categories'],
     data: function() {
         return {
@@ -29,7 +30,7 @@ var Sidebar = Vue.component('sidebar', {
 });
 
 var MainContent = Vue.component('main-content', {
-    template: '<div class="col-10 h-100 bg-light"><div class="chart-example" id="chart"><svg></svg></div></div>',
+    template: '<div class="col-10 h-100 bg-light nopadding"><div class="chart-example" id="chart"><svg></svg></div></div>',
     props: ['categories', 'checkedCategories'],
     watch: {
         categories: function() {
@@ -114,15 +115,15 @@ var MainContent = Vue.component('main-content', {
 });
 
 var App = Vue.component('app', {
-    template: '<div id="app" class="col-lg w-75 h-100"><div class="row container"><sidebar v-on:catsChanged="onCatsChanged" :categories="categories"></sidebar><main-content :categories="categories" :checkedCategories="checkedCats"></main-content></div></div>',
-  components: {
-    MainContent, Sidebar,
-},
-data: function() {
-  return {
-    categories: [],
-    checkedCats: [],
-}
+    template: '<div id="app" class="col-lg w-75 h-100 nopadding"><div class="row container nopadding"><sidebar v-on:catsChanged="onCatsChanged" :categories="categories"></sidebar><main-content :categories="categories" :checkedCategories="checkedCats"></main-content></div></div>',
+    components: {
+        MainContent, Sidebar,
+    },
+    data: function() {
+      return {
+        categories: [],
+        checkedCats: [],
+    }
 },
 mounted() {
     $.getJSON("./data.json", (json) => {

@@ -39,7 +39,7 @@
  *
  * @returns Chart function so that you can render the chart when ready
  */
-function bubbleChart() {
+ function bubbleChart() {
 
     var twitter = twitterUtils();
     twitter.init();
@@ -47,44 +47,44 @@ function bubbleChart() {
 
 
     var width = 960,
-        height = 960,
-        maxRadius = 6,
-        columnForColors = "title",
-        columnForRadius = "value";
+    height = 960,
+    maxRadius = 6,
+    columnForColors = "title",
+    columnForRadius = "value";
 
     function chart(selection) {
         var data = selection.datum();
         var div = selection,
-            svg = div.selectAll('svg');
+        svg = div.selectAll('svg');
         svg.attr('width', width).attr('height', height);
 
         var tooltip = selection
-            .append("div")
-            .style("position", "absolute")
-            .style("visibility", "hidden")
-            .style("color", "white")
-            .style("padding", "8px")
-            .style("background-color", "#626D71")
-            .style("border-radius", "6px")
-            .style("text-align", "center")
-            .style("font-family", "monospace")
-            .style("width", "400px")
-            .text("");
+        .append("div")
+        .style("position", "absolute")
+        .style("visibility", "hidden")
+        .style("color", "white")
+        .style("padding", "8px")
+        .style("background-color", "#626D71")
+        .style("border-radius", "6px")
+        .style("text-align", "center")
+        .style("font-family", "monospace")
+        .style("width", "400px")
+        .text("");
 
 
         var simulation = d3.forceSimulation(data)
-            .force("charge", d3.forceManyBody().strength([-50]))
-            .force("x", d3.forceX())
-            .force("y", d3.forceY())
-            .on("tick", ticked);
+        .force("charge", d3.forceManyBody().strength([-50]))
+        .force("x", d3.forceX())
+        .force("y", d3.forceY())
+        .on("tick", ticked);
 
         function ticked(e) {
             node.attr("cx", function(d) {
-                    return d.x;
-                })
-                .attr("cy", function(d) {
-                    return d.y;
-                });
+                return d.x;
+            })
+            .attr("cy", function(d) {
+                return d.y;
+            });
         }
 
         var colorCircles = d3.scaleOrdinal(d3.schemeCategory10);
@@ -95,46 +95,56 @@ function bubbleChart() {
         })]).range([5, 18])
 
         var node = svg.selectAll("circle")
-            .data(data)
-            .enter()
-            .append("circle")
-            .attr('r', function(d) {
-                return scaleRadius(d[columnForRadius])
-            })
-            .style("fill", function(d) {
-                return colorCircles(d[columnForColors])
-            })
-            .attr('transform', 'translate(' + [width / 2, height / 2] + ')')
-            .on("mouseover", function(d) {
-                tooltip.html(d[columnForColors] + "<br>" + d[columnForRadius] + " Seiten");
-                return tooltip.style("visibility", "visible");
-            })
-            .on("mousedown", function(d) {
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr('r', function(d) {
+            return scaleRadius(d[columnForRadius])
+        })
+        .style("fill", function(d) {
+            return colorCircles(d[columnForColors])
+        })
+        .attr('transform', 'translate(' + [width / 2, height / 2] + ')')
+        .on("mouseover", function(d) {
+            tooltip.html(d[columnForColors] + "<br>" + d[columnForRadius] + " Seiten");
+            return tooltip.style("visibility", "visible");
+        })
+        .on("mousedown", function(d) {
+            var twitterFeed = document.getElementById('listTwitterFeed');
+            var txt = document.getElementById('text_no_twitter');
+            txt.style.display = "none";
 
-                console.log(d);
-                var queryString = "";
+            while (twitterFeed.firstChild) {
+                twitterFeed.removeChild(twitterFeed.firstChild);
+            }
 
-                for (i = 0; i < d.category.length; i++) { 
+            
+            twitterFeed.insertAdjacentHTML( 'beforeend', "<div class='loader'></div>" );
 
-                    if(i != 0){
-                        queryString += "&";
-                    }
+            console.log(d);
+            var queryString = "";
 
-                    queryString += d.category[i];
+            for (i = 0; i < d.category.length; i++) { 
 
-                }               
+                if(i != 0){
+                    queryString += "&";
+                }
 
-                twitter.loadTwitter(queryString);
+                queryString += d.category[i];
 
-                tooltip.html(d[columnForColors] + "<br>" + d[columnForRadius] + " Seiten");
-                return tooltip.style("visibility", "visible");
-            })
-            .on("mousemove", function() {
-                return tooltip.style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px");
-            })
-            .on("mouseout", function() {
-                return tooltip.style("visibility", "hidden");
-            });
+            }               
+
+            twitter.loadTwitter(queryString);
+
+            tooltip.html(d[columnForColors] + "<br>" + d[columnForRadius] + " Seiten");
+            return tooltip.style("visibility", "visible");
+        })
+        .on("mousemove", function() {
+            return tooltip.style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px");
+        })
+        .on("mouseout", function() {
+            return tooltip.style("visibility", "hidden");
+        });
     }
 
     chart.width = function(value) {
