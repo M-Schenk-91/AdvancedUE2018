@@ -44,6 +44,7 @@ module.exports = {
 				lstTweetsOfAllFeeds.push.apply(lstTweetsOfAllFeeds, tweets)
 
 				if(pageCount >= pageCountMax){
+					console.log("SEND")
 					serverResponse.send(JSON.stringify(lstTweetsOfAllFeeds));
 					//console.log(lstTweetsOfAllFeeds);
 				}
