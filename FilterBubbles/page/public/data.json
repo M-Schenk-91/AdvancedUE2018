@@ -4,7 +4,7 @@
             "categoryName": "Sport",
             "subcategories": [
                 {
-                    "subcategoryName": "Fußball",
+                    "subcategory": "Fußball",
                     "sites": [
                         "Bundesliga_DE",
                         "spox",
@@ -14,7 +14,7 @@
                     ]
                 },
                 {
-                    "subcategoryName": "Basketball",
+                    "subcategory": "Basketball",
                     "sites": [
                         "basketballforever",
                         "nikebasketball",
@@ -24,7 +24,7 @@
                     ]
                 },
                 {
-                    "subcategoryName": "Handball",
+                    "subcategory": "Handball",
                     "sites": [
                         "DKBHBL",
                         "EHF",
@@ -33,7 +33,7 @@
                     ]
                 },
                 {
-                    "subcategoryName": "Automobilrennsport",
+                    "subcategory": "Automobilrennsport",
                     "sites": [
                         "f1",
                         "formel1_DE",
@@ -334,7 +334,7 @@
                     "sites": [
                         "NASA",
                         "ESA_de",
-                        "SpaceX"              
+                        "SpaceX"
                     ]
                 },
                 {

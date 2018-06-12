@@ -7,7 +7,7 @@ window.addEventListener('twittertemplatecreated', function (e) {
         twitterFeed.removeChild(twitterFeed.firstChild);
     }
 
-    for (i = 0; i < e.detail.length; i++) { 
+    for (i = 0; i < e.detail.length; i++) {
         twitterFeed.appendChild(e.detail[i]);
 
     }
@@ -15,7 +15,7 @@ window.addEventListener('twittertemplatecreated', function (e) {
 });
 
 var Sidebar = Vue.component('sidebar', {
-    template: '<div class="col-2 bg-dark h-100 nopadding"><ul class="nav flex-column pt-5"><template v-for="category in categories"><li class="nav-item"><a class="nav-link active" data-toggle="collapse" :href="[\'#collapseCategory\' + category.categoryName]" role="button" aria-expanded="false" aria-controls="collapseCategory">{{category.categoryName}}</a></li><li class="nav-item collapse ml-2" :id="[\'collapseCategory\' + category.categoryName]"><form class="text-white ml-4"><div v-for="subCat in category.subcategories" v-bind:key="subCat.subcategoryName" class="form-group form-check"><input type="checkbox" class="form-check-input" :value="subCat.subcategoryName" @change="onChange" v-model="checkedCats" :id="[\'subCat\' + subCat.subcategoryName]"><label class="form-check-label" :for="[\'subCat\' + subCat.subcategoryName]">{{subCat.subcategoryName}}</label></div></form></li></template></ul></div>',
+    template: '<div class="col-2 bg-dark h-100 nopadding scrollsidebar"><ul class="nav flex-column pt-5"><template v-for="category in categories"><li class="nav-item"><a class="nav-link active" data-toggle="collapse" :href="[\'#collapseCategory\' + category.categoryName]" role="button" aria-expanded="false" aria-controls="collapseCategory">{{category.categoryName}}</a></li><li class="nav-item collapse ml-2" :id="[\'collapseCategory\' + category.categoryName]"><form class="text-white ml-4"><div v-for="subCat in category.subcategories" v-bind:key="subCat.subcategory" class="form-group form-check"><input type="checkbox" class="form-check-input" :value="subCat.subcategory" @change="onChange" v-model="checkedCats" :id="[\'subCat\' + subCat.subcategory]"><label class="form-check-label" :for="[\'subCat\' + subCat.subcategory]">{{subCat.subcategory}}</label></div></form></li></template></ul></div>',
     props: ['categories'],
     data: function() {
         return {
@@ -35,14 +35,14 @@ var MainContent = Vue.component('main-content', {
     watch: {
         categories: function() {
             this.data = this.mapCategoriesToBubbles(this.categories, this.checkedCategories);
-            var chart = bubbleChart().width(600).height(400);
-            d3.select('#chart').datum(this.data).call(chart);
+            this.chart = bubbleChart().width(600).height(400);
+            d3.select('#chart').datum(this.data).call(this.chart);
             return;
         },
         checkedCategories: function () {
             this.data = this.mapCategoriesToBubbles(this.categories, this.checkedCategories);
-            var chart = bubbleChart().width(600).height(400);
-            d3.select('#chart').datum(this.data).call(chart);
+            this.chart = bubbleChart().width(600).height(400);
+            d3.select('#chart').datum(this.data).call(this.chart);
             return;
         }
     },
@@ -53,8 +53,8 @@ var MainContent = Vue.component('main-content', {
     },
     mounted() {
         this.data = this.mapCategoriesToBubbles(this.categories, this.checkedCategories);
-        var chart = bubbleChart().width(600).height(400);
-        d3.select('#chart').datum(this.data).call(chart);
+        this.chart = bubbleChart().width(600).height(400);
+        d3.select('#chart').datum(this.data).call(this.chart);
     },
     methods: {
         mapCategoriesToBubbles: function(cats, checkedCats) {
@@ -69,7 +69,7 @@ var MainContent = Vue.component('main-content', {
             for (var c = 0; c < cats.length; c++) {
                 for (var s = 0; s < cats[c].subcategories.length; s++) {
                     for (var i = 0; i < checkedCats.length; i++) {
-                        if(checkedCats[i] == cats[c].subcategories[s].subcategoryName) {
+                        if(checkedCats[i] == cats[c].subcategories[s].subcategory) {
                             sites = sites.concat(cats[c].subcategories[s].sites)
                         }
                     }
@@ -88,7 +88,7 @@ var MainContent = Vue.component('main-content', {
             for (var c = 0; c < cats.length; c++) {
                 for (var s = 0; s < cats[c].subcategories.length; s++) {
                     for (var i = 0; i < checkedCats.length; i++) {
-                        if(checkedCats[i] == cats[c].subcategories[s].subcategoryName) {
+                        if(checkedCats[i] == cats[c].subcategories[s].subcategory) {
                             hasSubcatChecked = true;
                             break
                         }
