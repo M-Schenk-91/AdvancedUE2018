@@ -1,0 +1,517 @@
+{
+    "categories": [
+        {
+            "categoryName": "Sport",
+            "subcategories": [
+                {
+                    "subcategory": "Fußball",
+                    "sites": [
+                        "Bundesliga_DE",
+                        "spox",
+                        "kicker",
+                        "sportbild",
+                        "Cristiano"
+                    ]
+                },
+                {
+                    "subcategory": "Basketball",
+                    "sites": [
+                        "basketballforever",
+                        "nikebasketball",
+                        "nba",
+                        "DBB_Basketball",
+                        "KingJames"
+                    ]
+                },
+                {
+                    "subcategory": "Handball",
+                    "sites": [
+                        "DKBHBL",
+                        "EHF",
+                        "thw_handball",
+                        "DHB_Teams"
+                    ]
+                },
+                {
+                    "subcategory": "Automobilrennsport",
+                    "sites": [
+                        "f1",
+                        "formel1_DE",
+                        "eFORMELde",
+                        "PorscheRaces",
+                        "ScuderiaFerrari",
+                        "MercedesAMGF1",
+                        "redbullracing",
+                        "FIA_F2",
+                        "fiaf3europe"
+                    ]
+                }
+            ]
+        },
+        {
+            "categoryName": "Nachrichten",
+            "subcategories": [
+                {
+                    "subcategory": "Politik",
+                    "sites": [
+                        "zeitonline_pol",
+                        "WELT_Politik",
+                        "Politiknews_org",
+                        "SPIEGEL_Politik",
+                        "dw_politik",
+                        "BILD_Politik"
+                    ]
+                },
+                {
+                    "subcategory": "Sport",
+                    "sites": [
+                        "TwitterSports",
+                        "srfsport",
+                        "BILD_Sport",
+                        "BBCSport",
+                        "spox"
+                    ]
+                },
+                {
+                    "subcategory": "Lifestyle",
+                    "sites": [
+                        "lifestyle_fit",
+                        "FoxNewsLife"
+                    ]
+                },
+                {
+                    "subcategory": "Regional",
+                    "sites": [
+                        "Regensburg",
+                        "mz_regensburg",
+                        "SZ_Bayern",
+                        "wochenblattR"
+                    ]
+                },
+                {
+                    "subcategory": "Technologie",
+                    "sites": [
+                        "ReutersTech",
+                        "nytimesbits",
+                        "ForbesTech",
+                        "technology",
+                        "DigitalTrends"
+                    ]
+                },
+                {
+                    "subcategory": "Wirtschaft",
+                    "sites": [
+                        "WirtschaftNews",
+                        "wiwo",
+                        "BW",
+                        "TheEconomist",
+                        "Forbes"
+                    ]
+                }
+            ]
+        },
+        {
+            "categoryName": "Politik",
+            "subcategories": [
+                {
+                    "subcategory": "US",
+                    "sites": [
+                        "BarackObama",
+                        "realDonaldTrump",
+                        "WhiteHouse"
+                    ]
+                },
+                {
+                    "subcategory": "Weltweit",
+                    "sites": [
+                        "narendramodi",
+                        "realDonaldTrump",
+                        "AngelaMerkeICDU",
+                        "EmmanuelMacron",
+                        "10DowningStreet",
+                        "EU_Commission",
+                        "mfa_russia",
+                        "PutinRF_Eng",
+                        "WPReview"
+                    ]
+                },
+                {
+                    "subcategory": "Die Linke",
+                    "sites": [
+                        "dieLinke",
+                        "Linksfraktion",
+                        "katjakipping",
+                        "SWagenknecht",
+                        "LINKE_Bayern",
+                        "b_riexinger"
+                    ]
+                },
+                {
+                    "subcategory": "AfD",
+                    "sites": [
+                        "AfD_Bund",
+                        "AfD_Bayern",
+                        "AfDKompakt",
+                        "AfD",
+                        "Joerg_Meuthen",
+                        "Alice_Weidel"
+                    ]
+                },
+                {
+                    "subcategory": "Die Grünen",
+                    "sites": [
+                        "Die_Gruenen",
+                        "gruene_jugend",
+                        "Gruene_Bayern",
+                        "GoeringEckardt",
+                        "cem_oezdemir",
+                        "GrueneLandtagBY",
+                        "ToniHofreiter",
+                        "ToniHofreiter",
+                        "RobertHabeck"
+                    ]
+                },
+                {
+                    "subcategory": "CDU",
+                    "sites": [
+                        "CDU",
+                        "cducsubt",
+                        "AngelaMerkeICDU"
+                    ]
+                },
+                {
+                    "subcategory": "CSU",
+                    "sites": [
+                        "cducsubt",
+                        "CSU",
+                        "Markus_Soeder",
+                        "csu_lt"
+                    ]
+                },
+                {
+                    "subcategory": "SPD",
+                    "sites": [
+                        "spdde",
+                        "BayernSPD",
+                        "spdbt",
+                        "jusos",
+                        "OlafScholz",
+                        "BayernSPD_Lndtg",
+                        "m_rinderspacher"
+                    ]
+                },
+                {
+                    "subcategory": "FDP",
+                    "sites": [
+                        "fdp",
+                        "c_lindner",
+                        "fdpbay",
+                        "fdpbt",
+                        "DFoest"
+                    ]
+                },
+                {
+                    "subcategory": "Digitales",
+                    "sites": [
+                        "Piratenpartei",
+                        "PiratenRGB",
+                        "politik_digital",
+                        "Digital_Bund"
+                    ]
+                },
+                {
+                    "subcategory": "Umwelt",
+                    "sites": [
+                        "Fairtrade_DE",
+                        "greenpeace_de",
+                        "bund_net",
+                        "BUNDjugend",
+                        "bmu"
+
+                    ]
+                },
+                {
+                    "subcategory": "Wirtschaft",
+                    "sites": [
+                        "insm",
+                        "WirtschaftDE",
+                        "wiwo",
+                        "BMWi_Bund"
+                    ]
+                }
+            ]
+        },
+        {
+            "categoryName": "Games",
+            "subcategories": [
+                {
+                    "subcategory": "Shooter",
+                    "sites": [
+                        "Battlefield",
+                        "CallofDuty",
+                        "csgo_dev"
+                    ]
+                },
+                {
+                    "subcategory": "Strategie",
+                    "sites": [
+                        "StarCraft",
+                        "AgeOfEmpires",
+                        "greygoogame"
+                    ]
+                },
+                {
+                    "subcategory": "Rollenspiele",
+                    "sites": [
+                        "Warcraft",
+                        "witchergame",
+                        "larianstudios",
+                        "WorldofEternity"
+                    ]
+                },
+                {
+                    "subcategory": "Sport-/ und Rennspiele",
+                    "sites": [
+                        "NeedforSpeed",
+                        "ForzaMotorsport",
+                        "EASPORTSFIFA",
+                        "NBA2K"
+                    ]
+                },
+                {
+                    "subcategory": "E-Sport",
+                    "sites": [
+                        "ESL",
+                        "lolesports",
+                        "Blizzard_Ent"
+                    ]
+                },
+                {
+                    "subcategory": "Sonstige",
+                    "sites": [
+                        "FortniteGame",
+                        "PUBG"
+                    ]
+                }
+
+            ]
+        },
+        {
+            "categoryName": "Food",
+            "subcategories": [
+                {
+                    "subcategory": "Vegan",
+                    "sites": [
+                        "vegan",
+                        "vgn_at",
+                        "ThankTankCr8"
+                    ]
+                },
+                {
+                    "subcategory": "Vegetarisch",
+                    "sites": [
+                        "CleanEatingMag",
+                        "VegTimes",
+                        "VegetarianTasty",
+                        "kochenoknochen"
+                    ]
+                },
+                {
+                    "subcategory": "Kochen",
+                    "sites": [
+                        "leckerkochennet",
+                        "waskocheich",
+                        "chefkochde"
+                    ]
+                }
+            ]
+        },
+        {
+            "categoryName": "Wissenschaft",
+            "subcategories": [
+                {
+                    "subcategory": "Weltraum",
+                    "sites": [
+                        "NASA",
+                        "ESA_de",
+                        "SpaceX"
+                    ]
+                },
+                {
+                    "subcategory": "Medizin",
+                    "sites": [
+                        "SpringerMed"
+                    ]
+                },
+                {
+                    "subcategory": "Forschung",
+                    "sites": [
+                        "nature"
+                    ]
+                },
+                {
+                    "subcategory": "Physik",
+                    "sites": [
+                        "CERN"
+                    ]
+                }
+            ]
+        },
+        {
+            "categoryName": "Fashion",
+            "subcategories": [
+                {
+                    "subcategory": "Accessories",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Schmuck",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Styling / Kosmetik",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Schuhe",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Taschen",
+                    "sites": []
+                }
+            ]
+        },
+        {
+            "categoryName": "Wirtschaft",
+            "subcategories": [
+                {
+                    "subcategory": "Blogger / Nachrichten",
+                    "sites": [
+                        "Schuldensuehner",
+                        "EuroBriefing",
+                        "LukasSustala"
+                    ]
+                },
+                {
+                    "subcategory": "Marketing",
+                    "sites": [
+                        "MarketingEds",
+                        "MKRedaktion",
+                        "Horizont"
+                    ]
+                },
+                {
+                    "subcategory": "Consulting",
+                    "sites": [
+                        "AccentureConslt",
+                        "BW",
+                        "TheEconomist",
+                        "McKinsey",
+                        "Gartner_inc"
+                    ]
+                },
+                {
+                    "subcategory": "Finanzen",
+                    "sites": [
+                        "Kiplinger",
+                        "barronsonline",
+                        "FortuneMagazine",
+                        "IBDinvestors"
+                    ]
+                }
+            ]
+        },
+        {
+            "categoryName": "Technology",
+            "subcategories": [
+                {
+                    "subcategory": "Gadgets",
+                    "sites": [
+                        "kickstarter",
+                        "Indiegogo",
+                        "Gadgets360",
+                        "gadgets"
+                    ]
+                },
+                {
+                    "subcategory": "Hardware",
+                    "sites": [
+                        "intel",
+                        "AMD",
+                        "nvidia",
+                        "Radeon",
+                        "PCGH_Redaktion",
+                        "hardwareluxx_de"
+                    ]
+                },
+                {
+                    "subcategory": "Developers",
+                    "sites": [
+                        "heisedc",
+                        "msdev_de",
+                        "googledevs"
+                    ]
+                },
+                {
+                    "subcategory": "Nachrichten",
+                    "sites": [
+                        "DigitalTrends",
+                        "heiseonline",
+                        "golem"
+                    ]
+                }
+            ]
+        },
+        {
+            "categoryName": "Art",
+            "subcategories": [
+                {
+                    "subcategory": "Design",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Musik",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Architektur",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Poesie",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Schauspiel / Filme",
+                    "sites": []
+                }
+            ]
+        },
+        {
+            "categoryName": "Lifestyle",
+            "subcategories": [
+                {
+                    "subcategory": "Health",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Shopping",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Fitness",
+                    "sites": []
+                },
+                {
+                    "subcategory": "DIY",
+                    "sites": []
+                },
+                {
+                    "subcategory": "Reisen",
+                    "sites": []
+                }
+            ]
+        }
+    ]
+}

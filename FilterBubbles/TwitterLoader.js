@@ -20,8 +20,12 @@ module.exports = {
 	loadFeed: function(pages, serverResponse){
 		console.log("TwitterLoader loading twitter feeds of: " + pages);
 
-		var path = "statuses/user_timeline";
-
+		//var path = "statuses/user_timeline";
+		var path = "friends/list"
+		client.get(path, {screen_name: 'BSchweinsteiger'}, function(error, tweets, response) {
+			serverResponse.send(JSON.stringify(response));
+		});
+		/*
 		var lstPagesToLoad = pages.split("&");
 
 		console.log(lstPagesToLoad);
@@ -31,7 +35,7 @@ module.exports = {
 		var lstTweetsOfAllFeeds = [];
 
 
-		for (i = 0; i < lstPagesToLoad.length; i++) { 
+		for (i = 0; i < lstPagesToLoad.length; i++) {
 			client.get(path, {screen_name: lstPagesToLoad[i]}, function(error, tweets, response) {
 
 				if(error){
@@ -46,12 +50,10 @@ module.exports = {
 				if(pageCount >= pageCountMax){
 					console.log("SEND")
 					serverResponse.send(JSON.stringify(lstTweetsOfAllFeeds));
-					//console.log(lstTweetsOfAllFeeds);
 				}
 
-				//myEmitter.emit('twitterFeedLoaded', tweets);
-				
 			});
 		}
+		*/
 	}
 };

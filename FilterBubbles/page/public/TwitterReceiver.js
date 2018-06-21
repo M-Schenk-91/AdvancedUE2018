@@ -4,11 +4,11 @@ function twitterReceiever() {
 		console.log("HTML request: " + url)
 
 		var xmlHttp = new XMLHttpRequest();
-		xmlHttp.onreadystatechange = function() { 
+		xmlHttp.onreadystatechange = function() {
 			if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 				callback(xmlHttp.responseText);
 		}
-	    xmlHttp.open("GET", url, true); // true for asynchronous 
+	    xmlHttp.open("GET", url, true); // true for asynchronous
 	    xmlHttp.send(null);
 	},
 
@@ -20,7 +20,7 @@ function twitterReceiever() {
 	onTwitterFeedReceived = function(response) {
 		//DATA LOADED
 		var feed =  JSON.parse(response);
-		//console.log(feed);
+		console.log(feed);
 		console.log("RECEIVED")
 		var evt = new CustomEvent('twitterfeedreceived', { detail: feed });
 		window.dispatchEvent(evt);

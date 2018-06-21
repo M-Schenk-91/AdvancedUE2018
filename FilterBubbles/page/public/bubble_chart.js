@@ -48,7 +48,7 @@
 
     var width = 960,
     height = 960,
-    maxRadius = 6,
+    maxRadius = 8,
     columnForColors = "title",
     columnForRadius = "value";
 
@@ -56,7 +56,6 @@
         var data = selection.datum();
         var div = selection,
         svg = div.selectAll('svg');
-        svg.attr('width', width).attr('height', height);
 
         var tooltip = selection
         .append("div")
@@ -92,7 +91,7 @@
             return +d[columnForRadius];
         }), d3.max(data, function(d) {
             return +d[columnForRadius];
-        })]).range([5, 18])
+        })]).range([15, 18])
 
         var node = svg.selectAll("circle")
         .data(data)
@@ -117,26 +116,11 @@
             while (twitterFeed.firstChild) {
                 twitterFeed.removeChild(twitterFeed.firstChild);
             }
-
-            
             twitterFeed.insertAdjacentHTML( 'beforeend', "<div class='loader'></div>" );
 
-            console.log(d);
-            var queryString = "";
-
-            for (i = 0; i < d.category.length; i++) { 
-
-                if(i != 0){
-                    queryString += "&";
-                }
-
-                queryString += d.category[i];
-
-            }               
-
-            twitter.loadTwitter(queryString);
-
+            twitter.loadTwitter(d.title);
             tooltip.html(d[columnForColors] + "<br>" + d[columnForRadius] + " Seiten");
+            $('#exampleModalCenter').modal('show');
             return tooltip.style("visibility", "visible");
         })
         .on("mousemove", function() {

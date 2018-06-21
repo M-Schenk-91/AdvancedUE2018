@@ -1,7 +1,6 @@
 Vue.config.productionTip = false;
 var twitterFeed = document.getElementById('listTwitterFeed');
 
-
 window.addEventListener('twittertemplatecreated', function (e) {
     while (twitterFeed.firstChild) {
         twitterFeed.removeChild(twitterFeed.firstChild);
@@ -9,131 +8,85 @@ window.addEventListener('twittertemplatecreated', function (e) {
 
     for (i = 0; i < e.detail.length; i++) {
         twitterFeed.appendChild(e.detail[i]);
-
     }
 
 });
 
-var Sidebar = Vue.component('sidebar', {
-    template: '<div class="col-2 bg-dark h-100 nopadding scrollsidebar"><ul class="nav flex-column pt-5"><template v-for="category in categories"><li class="nav-item"><a class="nav-link active" data-toggle="collapse" :href="[\'#collapseCategory\' + category.categoryName]" role="button" aria-expanded="false" aria-controls="collapseCategory">{{category.categoryName}}</a></li><li class="nav-item collapse ml-2" :id="[\'collapseCategory\' + category.categoryName]"><form class="text-white ml-4"><div v-for="subCat in category.subcategories" v-bind:key="subCat.subcategory" class="form-group form-check"><input type="checkbox" class="form-check-input" :value="subCat.subcategory" @change="onChange" v-model="checkedCats" :id="[\'subCat\' + subCat.subcategory]"><label class="form-check-label" :for="[\'subCat\' + subCat.subcategory]">{{subCat.subcategory}}</label></div></form></li></template></ul></div>',
-    props: ['categories'],
-    data: function() {
+var Navbar = Vue.component('navbar', {
+    template:`<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">FilterBubbles</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#">Proto 1 <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Proto 2</a>
+                      </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                      <input v-model="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="button" @click="$emit('search', search)">Search</button>
+                    </form>
+                  </div>
+                </nav>`,
+    data() {
         return {
-            checkedCats: [],
-        }
-    },
-    methods: {
-        onChange: function() {
-            this.$emit('catsChanged', this.checkedCats)
+            search: null,
         }
     }
 });
-
 var MainContent = Vue.component('main-content', {
-    template: '<div class="col-10 h-100 bg-light nopadding"><div class="chart-example" id="chart"><svg></svg></div></div>',
-    props: ['categories', 'checkedCategories'],
+    template: '<div class="h-100 bg-light nopadding"><div class="chart-example" id="chart"><svg class="h-100 w-100"></svg></div></div>',
+    props: ['bubbles', 'search'],
     watch: {
-        categories: function() {
-            this.data = this.mapCategoriesToBubbles(this.categories, this.checkedCategories);
-            this.chart = bubbleChart().width(600).height(400);
-            d3.select('#chart').datum(this.data).call(this.chart);
-            return;
+        bubbles() {
+            this.data = this.bubbles
+            this.chart = bubbleChart().width(600).height(400)
+            d3.select('#chart').datum(this.data).call(this.chart)
         },
-        checkedCategories: function () {
-            this.data = this.mapCategoriesToBubbles(this.categories, this.checkedCategories);
-            this.chart = bubbleChart().width(600).height(400);
-            d3.select('#chart').datum(this.data).call(this.chart);
-            return;
+        search() {
+            this.data.push({"title": this.search, "value": 99999999})
+            this.chart = bubbleChart().width(600).height(400)
+            d3.select('#chart').datum(this.data).call(this.chart)
         }
     },
     data: function() {
         return {
-            data: null,
+            data: [],
+            chart: null,
         }
     },
     mounted() {
-        this.data = this.mapCategoriesToBubbles(this.categories, this.checkedCategories);
-        this.chart = bubbleChart().width(600).height(400);
-        d3.select('#chart').datum(this.data).call(this.chart);
+        console.log(this.bubbles)
+        this.chart = bubbleChart().width(600).height(400)
+        d3.select('#chart').datum(this.bubbles).call(this.chart);
     },
     methods: {
-        mapCategoriesToBubbles: function(cats, checkedCats) {
-            let data = [];
-            data.push(this.getMyBubble(cats, checkedCats))
-            data = data.concat(this.getOtherBubbles(cats, checkedCats))
-            return data
-        },
-        getMyBubble: function(cats, checkedCats) {
-            let sites = []
 
-            for (var c = 0; c < cats.length; c++) {
-                for (var s = 0; s < cats[c].subcategories.length; s++) {
-                    for (var i = 0; i < checkedCats.length; i++) {
-                        if(checkedCats[i] == cats[c].subcategories[s].subcategory) {
-                            sites = sites.concat(cats[c].subcategories[s].sites)
-                        }
-                    }
-                }
-            }
-
-            return {
-                title: 'Meine Bubble',
-                value: sites.length,
-                category: sites
-            }
-        },
-        getOtherBubbles: function(cats, checkedCats) {
-            let bubbles = [];
-            let hasSubcatChecked = false;
-            for (var c = 0; c < cats.length; c++) {
-                for (var s = 0; s < cats[c].subcategories.length; s++) {
-                    for (var i = 0; i < checkedCats.length; i++) {
-                        if(checkedCats[i] == cats[c].subcategories[s].subcategory) {
-                            hasSubcatChecked = true;
-                            break
-                        }
-                    }
-                    if(hasSubcatChecked) break
-                }
-            if (!hasSubcatChecked) {
-                let sites = [];
-                for (var s = 0; s < cats[c].subcategories.length; s++) {
-                    sites = sites.concat(cats[c].subcategories[s].sites)
-                }
-                let bubble = {
-                    title: cats[c].categoryName,
-                    value: sites.length,
-                    category: sites
-                };
-                bubbles.push(bubble)
-            }
-            hasSubcatChecked = false;
-        }
-        return bubbles
     },
-},
 });
 
 var App = Vue.component('app', {
-    template: '<div id="app" class="col-lg w-75 h-100 nopadding"><div class="row container nopadding"><sidebar v-on:catsChanged="onCatsChanged" :categories="categories"></sidebar><main-content :categories="categories" :checkedCategories="checkedCats"></main-content></div></div>',
+    template: '<div id="app" class="h-100 container-fluid nopadding"><navbar v-on:search="search"></navbar><main-content :search="searchVal" :bubbles="bubbles"></main-content></div>',
     components: {
-        MainContent, Sidebar,
+        MainContent, Navbar,
     },
     data: function() {
       return {
-        categories: [],
-        checkedCats: [],
+        bubbles: [],
+        searchVal: null,
     }
 },
 mounted() {
     $.getJSON("./data.json", (json) => {
-        this.categories = json.categories;
+        this.bubbles = json.bubbles;
     });
 },
 methods: {
-  onCatsChanged: function(checkedCats) {
-    this.checkedCats = checkedCats;
-},
+    search(val) {
+        this.searchVal = val
+    }
 },
 });
 

@@ -56,16 +56,17 @@ function twitterUtils () {
 
   var updateTwitterUI = function(feed){
 
+    /*
     feed.sort(compareTweets);
     templates = [];
 
-    for (i = 0; i < feed.length; i++) { 
+    for (i = 0; i < feed.length; i++) {
       addTweet(feed[i]);
     }
 
     var evt = new CustomEvent('twittertemplatecreated', { detail: templates });
     window.dispatchEvent(evt);
-
+    */
   };
 
   var init = function(){
