@@ -4,34 +4,27 @@ function twitterUtils () {
   var templates = null;
 
   var addTweet = function(user){
-    var tmpl = document.getElementById('twitter-template').content.cloneNode(true);
-
-    //text
-    tmpl.querySelector('.timeline-Tweet-text').innerText = user.status.text;
-
-    //image
-    if(user.status.entities != null){
-      if(user.status.entities.media != null){
-        tmpl.querySelector('.timeline-Tweet-img').src = user.status.entities.media[0].media_url_https;
+    console.log(user)
+    if ('status' in user) {
+      var tmpl = document.getElementById('twitter-template').content.cloneNode(true);
+      //text
+      if(user.status !== 'undefined') tmpl.querySelector('.timeline-Tweet-text').innerText = user.status.text;
+      //image
+      if(user.status.entities != null){
+        if(user.status.entities.media != null){
+          tmpl.querySelector('.timeline-Tweet-img').src = user.status.entities.media[0].media_url_https;
+        }
       }
+      //profile pic
+      if(user != null) tmpl.querySelector('.Avatar').src = user.profile_image_url_https;
+      //profile name
+      tmpl.querySelector('.TweetAuthor-name').innerText = user.name;
+      //profile screen_name
+      tmpl.querySelector('.TweetAuthor-screenName').innerText = "@" + user.screen_name;
+      //profile screen_name
+      tmpl.querySelector('.timeline-Tweet-timestamp').innerText = createTwitterTimestamp(user.status.created_at);
+      templates.push(tmpl)
     }
-
-    //profile pic
-    if(user != null){
-      tmpl.querySelector('.Avatar').src = user.profile_image_url_https;
-    }
-
-    //profile name
-    tmpl.querySelector('.TweetAuthor-name').innerText = user.name;
-
-    //profile screen_name
-    tmpl.querySelector('.TweetAuthor-screenName').innerText = "@" + user.screen_name;
-
-    //profile screen_name
-    tmpl.querySelector('.timeline-Tweet-timestamp').innerText = createTwitterTimestamp(user.status.created_at);
-
-    templates.push(tmpl)
-
   };
 
   var createTwitterTimestamp = function(dateString){
@@ -66,8 +59,15 @@ function twitterUtils () {
       console.log('Feed received', e.detail);
       updateTwitterUI(e.detail.body);
     });
+    window.addEventListener('twitterusersreceived', function (e) {
+      console.log('Users received', e.detail);
+
+    });
   };
 
+  var searchUser = function(search) {
+    twitter.userAutocomplete(search);
+  }
 
   var loadTwitter = function(feedsToLoad){
     twitter.loadFeeds(feedsToLoad);
@@ -75,6 +75,7 @@ function twitterUtils () {
 
   this.init = init;
   this.loadTwitter = loadTwitter;
+  this.searchUser = searchUser;
   return this;
 }
 

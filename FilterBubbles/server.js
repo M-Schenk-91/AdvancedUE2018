@@ -31,19 +31,14 @@ app.get('/privacy', function(request, response){
 
 app.get('/twitter/:owner', function(request, response){
 	twitterLoader.loadFeed(request.params.owner, response);
-
 });
 
+app.get('/users/:search', function(request, response){
+    twitterLoader.userAutocomplete(request.params.search, response);
+});
 
 var httpsServer = https.createServer(credentials, app);
 httpsServer.listen(8000, function () {
   console.log('Server listening on port 8000!');
 });
 
-/*
-var httpServer = http.createServer(app);
-
-httpServer.listen(8080, function () {
-  console.log('Server listening on port 8000!');
-});
-*/

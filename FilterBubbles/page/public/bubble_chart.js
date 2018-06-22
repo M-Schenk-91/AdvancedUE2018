@@ -41,11 +41,6 @@
  */
  function bubbleChart() {
 
-    var twitter = twitterUtils();
-    twitter.init();
-
-
-
     var width = 960,
     height = 960,
     maxRadius = 8,
@@ -117,8 +112,7 @@
                 twitterFeed.removeChild(twitterFeed.firstChild);
             }
             twitterFeed.insertAdjacentHTML( 'beforeend', "<div class='loader'></div>" );
-
-            twitter.loadTwitter(d.title);
+            twitterUt.loadTwitter(d.title);
             tooltip.html(d[columnForColors] + "<br>" + d[columnForRadius] + " Seiten");
             $('#exampleModalCenter').modal('show');
             return tooltip.style("visibility", "visible");
