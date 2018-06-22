@@ -19,41 +19,17 @@ module.exports = {
 
 	loadFeed: function(screenName, serverResponse){
 		console.log("TwitterLoader loading twitter feeds of: " + screenName);
-
-		//var path = "statuses/user_timeline";
 		var path = "friends/list"
 		client.get(path, {screen_name: screenName}, function(error, tweets, response) {
 			serverResponse.send(JSON.stringify(response));
 		});
-		/*
-		var lstPagesToLoad = pages.split("&");
+	},
 
-		console.log(lstPagesToLoad);
-
-		var pageCountMax = lstPagesToLoad.length;
-		var pageCount = 0;
-		var lstTweetsOfAllFeeds = [];
-
-
-		for (i = 0; i < lstPagesToLoad.length; i++) {
-			client.get(path, {screen_name: lstPagesToLoad[i]}, function(error, tweets, response) {
-
-				if(error){
-					pageCountMax--;
-					return;
-				}
-
-				pageCount++;
-				console.log("Got " + tweets.length)
-				lstTweetsOfAllFeeds.push.apply(lstTweetsOfAllFeeds, tweets)
-
-				if(pageCount >= pageCountMax){
-					console.log("SEND")
-					serverResponse.send(JSON.stringify(lstTweetsOfAllFeeds));
-				}
-
-			});
-		}
-		*/
+	userAutocomplete: function(search, serverResponse) {
+		console.log("TwitterLoader searching twitter user: " + search);
+		var path = "users/search"
+		client.get(path, {q: search}, function(error, tweets, response) {
+			serverResponse.send(JSON.stringify(response));
+		});
 	}
 };
