@@ -20,7 +20,6 @@ function twitterReceiever() {
 	onTwitterFeedReceived = function(response) {
 		//DATA LOADED
 		var feed =  JSON.parse(response);
-		console.log(feed);
 		console.log("RECEIVED")
 		var evt = new CustomEvent('twitterfeedreceived', { detail: feed });
 		window.dispatchEvent(evt);

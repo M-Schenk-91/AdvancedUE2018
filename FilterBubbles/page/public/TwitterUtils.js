@@ -3,37 +3,34 @@ function twitterUtils () {
   //var tmpl = document.getElementById('twitter-template');
   var templates = null;
 
-  var addTweet = function(tweet){
+  var addTweet = function(user){
     var tmpl = document.getElementById('twitter-template').content.cloneNode(true);
 
-
     //text
-    tmpl.querySelector('.timeline-Tweet-text').innerText = tweet.text;
+    tmpl.querySelector('.timeline-Tweet-text').innerText = user.status.text;
 
     //image
-    if(tweet.entities != null){
-      if(tweet.entities.media != null){
-        tmpl.querySelector('.timeline-Tweet-img').src = tweet.entities.media[0].media_url_https;
+    if(user.status.entities != null){
+      if(user.status.entities.media != null){
+        tmpl.querySelector('.timeline-Tweet-img').src = user.status.entities.media[0].media_url_https;
       }
     }
 
     //profile pic
-    if(tweet.user != null){
-      tmpl.querySelector('.Avatar').src = tweet.user.profile_image_url_https;
+    if(user != null){
+      tmpl.querySelector('.Avatar').src = user.profile_image_url_https;
     }
 
     //profile name
-    tmpl.querySelector('.TweetAuthor-name').innerText = tweet.user.name;
+    tmpl.querySelector('.TweetAuthor-name').innerText = user.name;
 
     //profile screen_name
-    tmpl.querySelector('.TweetAuthor-screenName').innerText = "@" + tweet.user.screen_name;
+    tmpl.querySelector('.TweetAuthor-screenName').innerText = "@" + user.screen_name;
 
     //profile screen_name
-    tmpl.querySelector('.timeline-Tweet-timestamp').innerText = createTwitterTimestamp(tweet.created_at);
+    tmpl.querySelector('.timeline-Tweet-timestamp').innerText = createTwitterTimestamp(user.status.created_at);
 
     templates.push(tmpl)
-
-
 
   };
 
@@ -55,24 +52,20 @@ function twitterUtils () {
   };
 
   var updateTwitterUI = function(feed){
-
-    /*
-    feed.sort(compareTweets);
+    let users = JSON.parse(feed).users
     templates = [];
-
-    for (i = 0; i < feed.length; i++) {
-      addTweet(feed[i]);
+    for (var i = 0; i < users.length; i++) {
+      addTweet(users[i])
     }
 
     var evt = new CustomEvent('twittertemplatecreated', { detail: templates });
     window.dispatchEvent(evt);
-    */
   };
 
   var init = function(){
     window.addEventListener('twitterfeedreceived', function (e) {
       console.log('Feed received', e.detail);
-      updateTwitterUI(e.detail);
+      updateTwitterUI(e.detail.body);
     });
   };
 
