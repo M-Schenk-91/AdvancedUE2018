@@ -96,7 +96,8 @@
             return scaleRadius(d[columnForRadius])
         })
         .style("fill", function(d) {
-            return colorCircles(d[columnForColors])
+            return "rgb(0, 191, 255)";
+            //return colorCircles(d[columnForColors])
         })
         .attr('transform', 'translate(' + [width / 2, height / 2] + ')')
         .on("mouseover", function(d) {
@@ -123,6 +124,15 @@
         .on("mouseout", function() {
             return tooltip.style("visibility", "hidden");
         });
+
+    node.append("text")
+        .attr("x", function(d){ return d.x; })
+        .attr("y", function(d){ return d.y + 5; })
+        .attr("text-anchor", "middle")
+        .text(function(d){ 
+                console.log(d)
+
+            return d.bubbleName; });
     }
 
     chart.width = function(value) {

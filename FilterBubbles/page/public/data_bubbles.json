@@ -8,9 +8,20 @@
       ]
     },
     {
-      "title": "EtienneToGo",
-      "value": 239118, 
-            "subcategories": [
+      "title": "realdonaldtrump",
+      "opposite": "HillaryClinton",
+      "bubbleName": "US right politics",
+      "value": 5075606,
+      "subcategories": [
+        "Fußball"
+      ]
+    },
+    {
+      "title": "HillaryClinton",
+      "opposite": "realdonaldtrump",
+      "bubbleName": "US left politics",
+      "value": 23100000,
+      "subcategories": [
         "Fußball"
       ]
     }

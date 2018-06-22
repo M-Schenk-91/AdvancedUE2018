@@ -1,16 +1,12 @@
 Vue.config.productionTip = false;
 var twitterFeed = document.getElementById('listTwitterFeed');
-<<<<<<< HEAD
 var profileDataList = document.getElementById('accordionExample');
 
 var userProfile = [];
 
-
-=======
 const twitterRec = twitterReceiever();
 const twitterUt = twitterUtils();
 twitterUt.init();
->>>>>>> proto
 
 window.addEventListener('twittertemplatecreated', function (e) {
     while (twitterFeed.firstChild) {
@@ -20,7 +16,10 @@ window.addEventListener('twittertemplatecreated', function (e) {
         twitterFeed.appendChild(e.detail[i]);
     }
 });
-<<<<<<< HEAD
+
+document.getElementById('btnProfileCreated').addEventListener("click", function(event){
+    
+});
 
 var createProfileEntry = function(id, category){
     var tmplCategory = document.getElementById('profile-template').content.cloneNode(true);
@@ -59,71 +58,20 @@ var createProfileEntry = function(id, category){
 
         content.appendChild(tmplSubCategory);
     }
-
-
-
-    
-
-
-/*
-    //image
-    if(user.status.entities != null){
-      if(user.status.entities.media != null){
-        tmpl.querySelector('.timeline-Tweet-img').src = user.status.entities.media[0].media_url_https;
-      }
-    }
-
-    //profile pic
-    if(user != null){
-      tmpl.querySelector('.Avatar').src = user.profile_image_url_https;
-    }
-
-    //profile name
-    tmpl.querySelector('.TweetAuthor-name').innerText = user.name;
-
-    //profile screen_name
-    tmpl.querySelector('.TweetAuthor-screenName').innerText = "@" + user.screen_name;
-
-    //profile screen_name
-    tmpl.querySelector('.timeline-Tweet-timestamp').innerText = createTwitterTimestamp(user.status.created_at);
-
-    templates.push(tmpl)
-    */
     profileDataList.appendChild(tmplCategory);
 
 
 };
 
-var Navbar = Vue.component('navbar', {
-    template:`<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">FilterBubbles</a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-    <li class="nav-item" v-on:click="profile"">
-    <a class="nav-link" href="#">Profil erstellen</a>
-    </li>
-    <li class="nav-item active">
-    <a class="nav-link" href="#">Proto 1 <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="#">Proto 2</a>
-    </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-    <input v-model="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="button" @click="$emit('search', search)">Search</button>
-    </form>
-    </div>
-    </nav>`,
-    data() {
-        return {
-            search: null,
-=======
+
 var Navbar = Vue.component('navbar', {
     template:`<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">FilterBubbles</a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
+                        <li class="nav-item" v-on:click="profile"">
+                            <a class="nav-link" href="#">Profil erstellen</a>
+                        </li>
                       <li class="nav-item active">
                         <a class="nav-link" href="#">Proto 1 <span class="sr-only">(current)</span></a>
                       </li>
@@ -167,7 +115,6 @@ var Navbar = Vue.component('navbar', {
     methods: {
         addBubble(screenName) {
             this.$emit('bubbleAdded', screenName)
->>>>>>> proto
         }
     }, 
     methods: {
