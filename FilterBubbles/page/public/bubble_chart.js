@@ -73,11 +73,8 @@
         .on("tick", ticked);
 
         function ticked(e) {
-            node.attr("cx", function(d) {
-                return d.x;
-            })
-            .attr("cy", function(d) {
-                return d.y;
+            node.attr("transform", function(d) {
+                return "translate(" + [d.x+(width / 2), d.y+(height / 2)] +")";
             });
         }
 
@@ -87,20 +84,26 @@
         }), d3.max(data, function(d) {
             return +d[columnForRadius];
         })]).range([15, 18])
+        
 
         var node = svg.selectAll("circle")
         .data(data)
         .enter()
+        .append("g")
+        .attr('transform', 'translate(' + [width, height] + ')')
+        .style('opacity',1);
 
-        .append("circle")
+        node.append("circle")
+        .attr("id", function(d, i) {
+            return i;
+        })
         .attr('r', function(d) {
             return scaleRadius(d[columnForRadius]) * 3
         })
         .style("fill", function(d) {
-            return "rgb(0, 191, 255)";
-            //return colorCircles(d[columnForColors])
+            //return "rgb(0, 191, 255)";
+            return colorCircles(d[columnForColors])
         })
-        .attr('transform', 'translate(' + [width, height] + ')')
         .on("mouseover", function(d) {
             tooltip.html(d[columnForColors] + "<br>" + d[columnForRadius] + " Seiten");
             return tooltip.style("visibility", "visible");
@@ -126,16 +129,18 @@
             return tooltip.style("visibility", "hidden");
         });
 
-    node.append("text")
-        .attr("text-anchor", "middle")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("fill", "black")
-        .attr("font-size", 100)
-        .attr("font-family", "sans-serif")
-        .text(function(d){ 
+        
 
-            return d.bubbleName; });
+        node.append("text")
+            .attr("text-anchor", "middle")
+            .append("tspan")
+            .attr("x", 0)
+            .attr("y", ".3em")
+            .attr("fill", "black")
+            .attr("font-family", "sans-serif")
+            .text(function(d){ 
+                return d.bubbleName; 
+            });
     }
 
     chart.width = function(value) {
