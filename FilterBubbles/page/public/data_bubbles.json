@@ -13,7 +13,8 @@
       "bubbleName": "US right politics",
       "value": 5075606,
       "subcategories": [
-        "Fußball"
+        "us",
+        ""
       ]
     },
     {
@@ -22,7 +23,7 @@
       "bubbleName": "US left politics",
       "value": 23100000,
       "subcategories": [
-        "Fußball"
+        "Vegan"
       ]
     }
   ]

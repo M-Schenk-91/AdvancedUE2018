@@ -130,7 +130,6 @@
         .attr("y", function(d){ return d.y + 5; })
         .attr("text-anchor", "middle")
         .text(function(d){ 
-                console.log(d)
 
             return d.bubbleName; });
     }
