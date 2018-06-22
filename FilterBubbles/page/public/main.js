@@ -97,7 +97,7 @@ var App = Vue.component('app', {
     }
 },
 mounted() {
-    $.getJSON("./data.json", (json) => {
+    $.getJSON("./data_bubbles.json", (json) => {
         this.bubbles = json.bubbles;
     });
 },
