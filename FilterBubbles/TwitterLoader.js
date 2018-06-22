@@ -17,12 +17,12 @@ module.exports = {
 		console.log("TwitterLoader initialized");
 	},
 
-	loadFeed: function(pages, serverResponse){
-		console.log("TwitterLoader loading twitter feeds of: " + pages);
+	loadFeed: function(screenName, serverResponse){
+		console.log("TwitterLoader loading twitter feeds of: " + screenName);
 
 		//var path = "statuses/user_timeline";
 		var path = "friends/list"
-		client.get(path, {screen_name: 'BSchweinsteiger'}, function(error, tweets, response) {
+		client.get(path, {screen_name: screenName}, function(error, tweets, response) {
 			serverResponse.send(JSON.stringify(response));
 		});
 		/*

@@ -57,7 +57,6 @@ function twitterUtils () {
     for (var i = 0; i < users.length; i++) {
       addTweet(users[i])
     }
-
     var evt = new CustomEvent('twittertemplatecreated', { detail: templates });
     window.dispatchEvent(evt);
   };
