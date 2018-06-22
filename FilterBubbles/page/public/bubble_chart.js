@@ -67,7 +67,7 @@
 
 
         var simulation = d3.forceSimulation(data)
-        .force("charge", d3.forceManyBody().strength([-50]))
+        .force("charge", d3.forceManyBody().strength([-500]))
         .force("x", d3.forceX())
         .force("y", d3.forceY())
         .on("tick", ticked);
@@ -91,15 +91,16 @@
         var node = svg.selectAll("circle")
         .data(data)
         .enter()
+
         .append("circle")
         .attr('r', function(d) {
-            return scaleRadius(d[columnForRadius])
+            return scaleRadius(d[columnForRadius]) * 3
         })
         .style("fill", function(d) {
             return "rgb(0, 191, 255)";
             //return colorCircles(d[columnForColors])
         })
-        .attr('transform', 'translate(' + [width / 2, height / 2] + ')')
+        .attr('transform', 'translate(' + [width, height] + ')')
         .on("mouseover", function(d) {
             tooltip.html(d[columnForColors] + "<br>" + d[columnForRadius] + " Seiten");
             return tooltip.style("visibility", "visible");

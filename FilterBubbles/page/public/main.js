@@ -24,17 +24,33 @@ document.getElementById('btnProfileCreated').addEventListener("click", function(
     $('#userInterestsForm').modal('hide');
 
     var chartGraph = document.getElementById('chart');
-    var elem = chartGraph.childNodes[0].childNodes[matchProfileToCategory()];
-    animationHighlight(elem);
+
+    for (var i = 0; i < chartGraph.childNodes[0].childNodes.length; i++) {
+        chartGraph.childNodes[0].childNodes[i].style.fill = "#00BFFF";
+        chartGraph.childNodes[0].childNodes[i].style.color = "#00BFFF";
+
+    }
+
+    var bubbleMatchID = matchProfileToCategory();
+
+    if(bubbleMatchID > -1){
+        var elem = chartGraph.childNodes[0].childNodes[bubbleMatchID];
+        animationHighlight(elem);
+    }else{
+        alert("Dein Profil konnte leider keiner Filterblase zugeordnet werden :(");
+    }
 });
 
 function animationHighlight(elem) {
+    elem.style.fill = "#ff0000"
+/*
     var pos = 0;
     var id = setInterval(frame, 5);
     function frame() {
         elem.style.fill = "#ff0000"
 
     }
+    */
 }
 
 var matchProfileToCategory = function() {
@@ -159,6 +175,10 @@ methods: {
     profile() {
 
         $.getJSON("./data_navbar.json", (json) => {
+
+            userProfile.length = 0;
+            $('#accordionExample').empty();
+
 
             for (var i = 0; i < json.categories.length; i++) {
                 createProfileEntry(i, json.categories[i]);
