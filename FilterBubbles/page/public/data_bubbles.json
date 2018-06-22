@@ -3,6 +3,7 @@
     {
       "title": "BSchweinsteiger",
       "value": 5075606,
+      "opposite": "HillaryClinton",
       "subcategories": [
         "Fußball"
       ]
@@ -13,8 +14,7 @@
       "bubbleName": "US right politics",
       "value": 5075606,
       "subcategories": [
-        "us",
-        ""
+        "us"
       ]
     },
     {

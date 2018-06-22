@@ -127,9 +127,12 @@
         });
 
     node.append("text")
-        .attr("x", function(d){ return d.x; })
-        .attr("y", function(d){ return d.y + 5; })
         .attr("text-anchor", "middle")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("fill", "black")
+        .attr("font-size", 100)
+        .attr("font-family", "sans-serif")
         .text(function(d){ 
 
             return d.bubbleName; });

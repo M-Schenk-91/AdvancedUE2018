@@ -2,6 +2,9 @@ Vue.config.productionTip = false;
 var twitterFeed = document.getElementById('listTwitterFeed');
 var profileDataList = document.getElementById('accordionExample');
 
+var elBtnShowOppositeFeed = null;
+var elChart = null;
+
 var userProfile = [];
 
 const twitterRec = twitterReceiever();
@@ -10,6 +13,9 @@ twitterUt.init();
 
 var chartGraph = null;
 var bubbleData = null;
+var bubbleMatchID = -1;
+
+var type = 1;
 
 window.addEventListener('twittertemplatecreated', function (e) {
     while (twitterFeed.firstChild) {
@@ -18,6 +24,11 @@ window.addEventListener('twittertemplatecreated', function (e) {
     for (i = 0; i < e.detail.length; i++) {
         twitterFeed.appendChild(e.detail[i]);
     }
+});
+
+document.getElementById('btnShowOppositeFeed').addEventListener("click", function(event){
+    // TODOOOOOOOOOOOOOOOOOO
+    $('#exampleModalCenter').modal('show');
 });
 
 document.getElementById('btnProfileCreated').addEventListener("click", function(event){
@@ -31,7 +42,7 @@ document.getElementById('btnProfileCreated').addEventListener("click", function(
 
     }
 
-    var bubbleMatchID = matchProfileToCategory();
+    bubbleMatchID = matchProfileToCategory();
 
     if(bubbleMatchID > -1){
         var elem = chartGraph.childNodes[0].childNodes[bubbleMatchID];
@@ -126,10 +137,10 @@ var Navbar = Vue.component('navbar', {
     <li class="nav-item" v-on:click="profile"">
     <a class="nav-link" href="#">Profil erstellen</a>
     </li>
-    <li class="nav-item active">
+    <li id="protoType1" class="nav-item active" v-on:click="type1">
     <a class="nav-link" href="#">Proto 1 <span class="sr-only">(current)</span></a>
     </li>
-    <li class="nav-item">
+    <li id="protoType2" class="nav-item" v-on:click="type2">
     <a class="nav-link" href="#">Proto 2</a>
     </li>
     </ul>
@@ -172,6 +183,36 @@ var Navbar = Vue.component('navbar', {
     }
 }, 
 methods: {
+    type1() {
+        if(type == 1) return; 
+        type = 1;
+
+        $('#protoType1').addClass("active");
+        $('#protoType2').removeClass("active");
+
+        elBtnShowOppositeFeed = $('#btnShowOppositeFeed');
+        elBtnShowOppositeFeed.detach();
+
+        if(elChart == null) elChart = $('#chart');
+
+        $('#contentHolder').append(elChart);
+    },
+
+    type2(){
+        if(type == 2) return; 
+        type = 2;
+
+        $('#protoType2').addClass("active");
+        $('#protoType1').removeClass("active");
+
+        elChart = $('#chart');
+        elChart.detach();
+
+        if(elBtnShowOppositeFeed == null) elBtnShowOppositeFeed = $('#btnShowOppositeFeed');
+
+        $('#contentHolder').append(elBtnShowOppositeFeed);
+    },
+
     profile() {
 
         $.getJSON("./data_navbar.json", (json) => {
@@ -194,7 +235,7 @@ methods: {
 },
 });
 var MainContent = Vue.component('main-content', {
-    template: '<div class="h-100 bg-light nopadding"><div class="chart-example" id="chart"><svg class="h-100 w-100"></svg></div></div>',
+    template: '<div id="contentHolder" class="h-100 bg-light nopadding"><div class="chart-example" id="chart"><svg class="h-100 w-100"></svg></div></div>',
     props: ['bubbles'],
     watch: {
         bubbles() {
