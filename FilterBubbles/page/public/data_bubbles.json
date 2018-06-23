@@ -9,9 +9,60 @@
     },
     {
       "title": "EtienneToGo",
-      "value": 239118, 
+      "value": 239118,
             "subcategories": [
         "Fußball"
+      ]
+    },
+
+    {
+      "title": "heidiklum",
+      "value": 5385944,
+            "subcategories": [
+              "Fashion",
+              "TV",
+              "Musik",
+              "Shopping",
+              "Health"
+      ]
+    },
+    {
+       "title": "officiallyjoko",
+      "value": 2257894,
+      "subcategories": [
+          "Musik",
+          "TV",
+          "Fußball",
+          "Automobilrennsport"
+      ]
+    },
+    {
+       "title": "janboehm",
+      "value": 2034092,
+      "subcategories": [
+          "Musik",
+          "TV",
+          "Politik",
+          "Nachrichten"
+      ]
+    },
+    {
+       "title": "NicoMarquardt",
+      "value": 557714,
+      "subcategories": [
+          "Weltraum",
+          "Regional",
+          "SPD",
+          "Politik"
+      ]
+    },
+    {
+       "title": "Sarazarlp",
+      "value": 519359,
+      "subcategories": [
+          "Games",
+          "Musik",
+          "TV"
       ]
     }
   ]
