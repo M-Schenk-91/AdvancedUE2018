@@ -4,7 +4,7 @@
       "title": "BSchweinsteiger",
       "bubbleName": "Sport / Fußball",
       "value": 5075606,
-      "opposite": "HillaryClinton",
+      "opposite": "SWagenknecht",
       "subcategories": [
         "Fußball",
         "Sport"
@@ -14,7 +14,7 @@
       "title": "officiallyjoko",
       "bubbleName": "Entertainment",
       "value": 2200000,
-      "opposite": "HillaryClinton",
+      "opposite": "realdonaldtrump",
       "subcategories": [
         "Lifestyle",
         "SPD",
@@ -26,7 +26,7 @@
       "title": "BibisBeauty",
       "bubbleName": "Beauty",
       "value": 1450000,
-      "opposite": "HillaryClinton",
+      "opposite": "NicoMarquardt",
       "subcategories": [
         "Shopping",
         "Blogger / Nachrichten",
@@ -41,7 +41,7 @@
       "title": "janboehm",
       "bubbleName": "TV",
       "value": 2000000,
-      "opposite": "HillaryClinton",
+      "opposite": "Astro_Alex",
       "subcategories": [
         "Politik",
         "Lifestyle",
@@ -82,7 +82,7 @@
       "title": "Astro_Alex",
       "bubbleName": "Wissenschaft",
       "value": 5075606,
-      "opposite": "HillaryClinton",
+      "opposite": "BibisBeauty",
       "subcategories": [
         "Weltraum",
         "Forschung",
@@ -95,38 +95,42 @@
       "value": 5075606,
       "opposite": "HillaryClinton",
       "subcategories": [
-        "Fußball",
-        "Sport"
+        "Nachrichten",
+        "Politik",
+        "Lifestyle",
+        "Blogger / Nachrichten"
+
       ]
     },
     {
       "title": "dieternuhr",
       "bubbleName": "Comedy",
       "value": 5075606,
-      "opposite": "HillaryClinton",
+      "opposite": "Alice_Weidel",
       "subcategories": [
-        "Fußball",
-        "Sport"
+      "Schauspiel / Filme"
       ]
     },
     {
       "title": "SWagenknecht",
       "bubbleName": "Politik national (links)",
       "value": 5075606,
-      "opposite": "HillaryClinton",
+      "opposite": "Alice_Weidel",
       "subcategories": [
-        "Fußball",
-        "Sport"
+        "Politik",
+        "Die Linke"
       ]
     },
     {
       "title": "TradingCryptoUS",
       "bubbleName": "Wirtschaft",
       "value": 5075606,
-      "opposite": "HillaryClinton",
+      "opposite": "LeFloid",
       "subcategories": [
-        "Fußball",
-        "Sport"
+        "Wirtschaft",
+        "Technologie",
+        "Finanzen"
+
       ]
     },
     {
@@ -153,7 +157,7 @@
       "title": "heidiklum",
       "bubbleName": "Fashion",
       "value": 5400000,
-      "opposite": "",
+      "opposite": "NicoMarquardt",
       "subcategories": [
         "Lifestyle",
         "Schuhe"
@@ -181,6 +185,8 @@
         "Vegan",
         "Politik",
         "US"]
+
+      
     },
     {
       "title": "NicoMarquardt",
@@ -197,8 +203,8 @@
     {
       "title": "Markus_Soeder",
       "bubbleName": "Politik national",
-      "opposite": "SWagenknecht",
-      "value": 28245,
+      "opposite": "BibisBeauty",
+      "value": 557714,
       "subcategories": [
           "CSU",
           "CDU",
@@ -206,7 +212,7 @@
           "Politik"
       ]
     },
-    {
+        {
       "title": "Veganz",
       "bubbleName": "Ernährung Vegan",
       "opposite": "Calmund",
