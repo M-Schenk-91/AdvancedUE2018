@@ -27,18 +27,25 @@ window.addEventListener('twittertemplatecreated', function (e) {
 });
 
 document.getElementById('btnShowOppositeFeed').addEventListener("click", function(event){
-            bubbleMatchID = matchProfileToCategory();
-            var twitterToLoad = bubbleData[bubbleMatchID].opposite;
+    bubbleMatchID = matchProfileToCategory();
 
-            var twitterFeed = document.getElementById('listTwitterFeed');
-            var txt = document.getElementById('text_no_twitter');
-            txt.style.display = "none";
+    if(bubbleMatchID > -1){
+        var twitterToLoad = bubbleData[bubbleMatchID].opposite;
+    }else{
+        alert("Dein Profil konnte leider keiner Filterblase zugeordnet werden :(");
+        return;
+    }
 
-            while (twitterFeed.firstChild) {
-                twitterFeed.removeChild(twitterFeed.firstChild);
-            }
-            twitterFeed.insertAdjacentHTML( 'beforeend', "<div class='loader'></div>" );
-            twitterUt.loadTwitter(twitterToLoad);
+
+    var twitterFeed = document.getElementById('listTwitterFeed');
+    var txt = document.getElementById('text_no_twitter');
+    txt.style.display = "none";
+
+    while (twitterFeed.firstChild) {
+        twitterFeed.removeChild(twitterFeed.firstChild);
+    }
+    twitterFeed.insertAdjacentHTML( 'beforeend', "<div class='loader'></div>" );
+    twitterUt.loadTwitter(twitterToLoad);
     $('#exampleModalCenter').modal('show');
 });
 
@@ -154,10 +161,10 @@ var Navbar = Vue.component('navbar', {
     <a class="nav-link" href="#">Profil erstellen</a>
     </li>
     <li id="protoType1" class="nav-item active" v-on:click="type1">
-    <a class="nav-link" href="#">Proto 1 <span class="sr-only">(current)</span></a>
+    <a class="nav-link" href="#">Szenario 1 <span class="sr-only">(current)</span></a>
     </li>
     <li id="protoType2" class="nav-item" v-on:click="type2">
-    <a class="nav-link" href="#">Proto 2</a>
+    <a class="nav-link" href="#">Szenario 2</a>
     </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
