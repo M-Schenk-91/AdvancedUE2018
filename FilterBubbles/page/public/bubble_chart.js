@@ -104,10 +104,12 @@
             return "#00BFFF";
             //return colorCircles(d[columnForColors])
         })
+        /*
         .on("mouseover", function(d) {
             tooltip.html(d[columnForColors] + "<br>" + d[columnForRadius] + " Seiten");
             return tooltip.style("visibility", "visible");
         })
+        */
         .on("mousedown", function(d) {
             var twitterFeed = document.getElementById('listTwitterFeed');
             var txt = document.getElementById('text_no_twitter');
@@ -122,13 +124,14 @@
             $('#exampleModalCenter').modal('show');
             return tooltip.style("visibility", "visible");
         })
+        /*
         .on("mousemove", function() {
             return tooltip.style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px");
         })
         .on("mouseout", function() {
             return tooltip.style("visibility", "hidden");
         });
-
+        */
         node.append("text")
             .attr("text-anchor", "middle")
             .append("tspan")
