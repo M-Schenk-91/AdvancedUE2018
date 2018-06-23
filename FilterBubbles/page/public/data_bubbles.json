@@ -2,16 +2,148 @@
   "bubbles": [
     {
       "title": "BSchweinsteiger",
+      "bubbleName": "Sport / Fußball",
       "value": 5075606,
       "opposite": "HillaryClinton",
       "subcategories": [
-        "Fußball"
+        "Fußball",
+        "Sport"
+      ]
+    },
+    {
+      "title": "officiallyjoko",
+      "bubbleName": "Sport / Fußball",
+      "value": 5075606,
+      "opposite": "HillaryClinton",
+      "subcategories": [
+        "Fußball",
+        "Sport"
+      ]
+    },
+    {
+      "title": "BibisBeauty",
+      "bubbleName": "Sport / Fußball",
+      "value": 5075606,
+      "opposite": "HillaryClinton",
+      "subcategories": [
+        "Fußball",
+        "Sport"
+      ]
+    },
+    {
+      "title": "janboehm",
+      "bubbleName": "Sport / Fußball",
+      "value": 5075606,
+      "opposite": "HillaryClinton",
+      "subcategories": [
+        "Fußball",
+        "Sport"
+      ]
+    },
+    {
+      "title": "unge",
+      "bubbleName": "Sport / Fußball",
+      "value": 5075606,
+      "opposite": "HillaryClinton",
+      "subcategories": [
+        "Fußball",
+        "Sport"
+      ]
+    },
+    {
+      "title": "thisiscro",
+      "bubbleName": "Sport / Fußball",
+      "value": 5075606,
+      "opposite": "HillaryClinton",
+      "subcategories": [
+        "Fußball",
+        "Sport"
+      ]
+    },
+    {
+      "title": "Astro_Alex",
+      "bubbleName": "Sport / Fußball",
+      "value": 5075606,
+      "opposite": "HillaryClinton",
+      "subcategories": [
+        "Fußball",
+        "Sport"
+      ]
+    },
+    {
+      "title": "LeFloid",
+      "bubbleName": "Sport / Fußball",
+      "value": 5075606,
+      "opposite": "HillaryClinton",
+      "subcategories": [
+        "Fußball",
+        "Sport"
+      ]
+    },
+    {
+      "title": "dieternuhr",
+      "bubbleName": "Sport / Fußball",
+      "value": 5075606,
+      "opposite": "HillaryClinton",
+      "subcategories": [
+        "Fußball",
+        "Sport"
+      ]
+    },
+    {
+      "title": "SWagenknecht",
+      "bubbleName": "Sport / Fußball",
+      "value": 5075606,
+      "opposite": "HillaryClinton",
+      "subcategories": [
+        "Fußball",
+        "Sport"
+      ]
+    },
+    {
+      "title": "TradingCryptoUS",
+      "bubbleName": "Sport / Fußball",
+      "value": 5075606,
+      "opposite": "HillaryClinton",
+      "subcategories": [
+        "Fußball",
+        "Sport"
+      ]
+    },
+    {
+      "title": "Calmund",
+      "bubbleName": "Sport / Fußball",
+      "value": 5075606,
+      "opposite": "HillaryClinton",
+      "subcategories": [
+        "Fußball",
+        "Sport"
+      ]
+    },
+    {
+      "title": "BSchweinsteiger",
+      "bubbleName": "Sport / Fußball",
+      "value": 5075606,
+      "opposite": "HillaryClinton",
+      "subcategories": [
+        "Fußball",
+        "Sport"
+      ]
+    },
+    {
+      "title": "heidiklum",
+      "bubbleName": "Sport / Fußball",
+      "value": 5400000,
+      "opposite": "",
+      "subcategories": [
+        "Lifestyle",
+        "Schuhe"
       ]
     },
     {
       "title": "realdonaldtrump",
       "opposite": "HillaryClinton",
-      "bubbleName": "US right politics",
+      "bubbleName": "Politik international (rechts)",
       "value": 5075606,
       "subcategories": [
         "US"
@@ -20,7 +152,7 @@
     {
       "title": "HillaryClinton",
       "opposite": "realdonaldtrump",
-      "bubbleName": "US left politics",
+      "bubbleName": "Politik international (links)",
       "value": 23100000,
       "subcategories": [
         "Vegan"
