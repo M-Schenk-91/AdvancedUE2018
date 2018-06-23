@@ -181,12 +181,10 @@
         "Vegan",
         "Politik",
         "US"]
-
-      
     },
     {
       "title": "NicoMarquardt",
-      "bubbleName": "",
+      "bubbleName": "Forschung",
       "opposite": "BibisBeauty",
       "value": 557714,
       "subcategories": [
@@ -199,13 +197,24 @@
     {
       "title": "Markus_Soeder",
       "bubbleName": "Politik national",
-      "opposite": "BibisBeauty",
-      "value": 557714,
+      "opposite": "SWagenknecht",
+      "value": 28245,
       "subcategories": [
           "CSU",
           "CDU",
           "Regional",
           "Politik"
+      ]
+    },
+    {
+      "title": "Veganz",
+      "bubbleName": "Ernährung Vegan",
+      "opposite": "Calmund",
+      "value": 6720,
+      "subcategories": [
+          "Vegan",
+          "Umwelt",
+          "Fashion"
       ]
     }
   ]
