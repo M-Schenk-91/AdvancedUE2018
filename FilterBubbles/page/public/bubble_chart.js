@@ -67,14 +67,14 @@
 
 
         var simulation = d3.forceSimulation(data)
-        .force("charge", d3.forceManyBody().strength([-500]))
+        .force("charge", d3.forceManyBody().strength([-800]))
         .force("x", d3.forceX())
         .force("y", d3.forceY())
         .on("tick", ticked);
 
         function ticked(e) {
             node.attr("transform", function(d) {
-                return "translate(" + [d.x+(width / 2), d.y+(height / 2)] +")";
+                return "translate(" + [d.x+(width), d.y+(height)] +")";
             });
         }
 
@@ -98,11 +98,11 @@
             return i;
         })
         .attr('r', function(d) {
-            return scaleRadius(d[columnForRadius]) * 3
+            return scaleRadius(d[columnForRadius]) * 4
         })
         .style("fill", function(d) {
-            //return "rgb(0, 191, 255)";
-            return colorCircles(d[columnForColors])
+            return "#00BFFF";
+            //return colorCircles(d[columnForColors])
         })
         .on("mouseover", function(d) {
             tooltip.html(d[columnForColors] + "<br>" + d[columnForRadius] + " Seiten");
@@ -129,14 +129,13 @@
             return tooltip.style("visibility", "hidden");
         });
 
-        
-
         node.append("text")
             .attr("text-anchor", "middle")
             .append("tspan")
             .attr("x", 0)
             .attr("y", ".3em")
-            .attr("fill", "black")
+            .attr("fill", "white")
+            .style("font-size", "12px")
             .attr("font-family", "sans-serif")
             .text(function(d){ 
                 return d.bubbleName; 

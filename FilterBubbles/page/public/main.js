@@ -27,9 +27,23 @@ window.addEventListener('twittertemplatecreated', function (e) {
 });
 
 document.getElementById('btnShowOppositeFeed').addEventListener("click", function(event){
-    // TODOOOOOOOOOOOOOOOOOO
+            bubbleMatchID = matchProfileToCategory();
+            var twitterToLoad = bubbleData[bubbleMatchID].opposite;
+
+            var twitterFeed = document.getElementById('listTwitterFeed');
+            var txt = document.getElementById('text_no_twitter');
+            txt.style.display = "none";
+
+            while (twitterFeed.firstChild) {
+                twitterFeed.removeChild(twitterFeed.firstChild);
+            }
+            twitterFeed.insertAdjacentHTML( 'beforeend', "<div class='loader'></div>" );
+            twitterUt.loadTwitter(twitterToLoad);
     $('#exampleModalCenter').modal('show');
 });
+
+elBtnShowOppositeFeed = $('#btnShowOppositeFeed');
+elBtnShowOppositeFeed.detach();
 
 document.getElementById('btnProfileCreated').addEventListener("click", function(event){
     $('#userInterestsForm').modal('hide');
@@ -37,15 +51,15 @@ document.getElementById('btnProfileCreated').addEventListener("click", function(
     var chartGraph = document.getElementById('chart');
 
     for (var i = 0; i < chartGraph.childNodes[0].childNodes.length; i++) {
-        chartGraph.childNodes[0].childNodes[i].style.fill = "#00BFFF";
-        chartGraph.childNodes[0].childNodes[i].style.color = "#00BFFF";
+        chartGraph.childNodes[0].childNodes[i].childNodes[0].style.fill = "#00BFFF";
+        //chartGraph.childNodes[0].childNodes[i].style.color = "#00BFFF";
 
     }
 
     bubbleMatchID = matchProfileToCategory();
 
     if(bubbleMatchID > -1){
-        var elem = chartGraph.childNodes[0].childNodes[bubbleMatchID];
+        var elem = chartGraph.childNodes[0].childNodes[bubbleMatchID].childNodes[0];
         animationHighlight(elem);
     }else{
         alert("Dein Profil konnte leider keiner Filterblase zugeordnet werden :(");
@@ -53,7 +67,9 @@ document.getElementById('btnProfileCreated').addEventListener("click", function(
 });
 
 function animationHighlight(elem) {
-    elem.style.fill = "#ff0000"
+    console.log(elem);
+    //elem.style.color = "#FF7F50";
+    elem.style.fill = "#FFA500";
 /*
     var pos = 0;
     var id = setInterval(frame, 5);
@@ -82,7 +98,7 @@ var matchProfileToCategory = function() {
         if(numTempMatches > numMatches) matchID = i;
     }
 
-    console.log(matchID);
+    //console.log(matchID);
     return matchID;
 };
 
