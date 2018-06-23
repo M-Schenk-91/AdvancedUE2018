@@ -12,57 +12,75 @@
     },
     {
       "title": "officiallyjoko",
-      "bubbleName": "Sport / Fußball",
-      "value": 5075606,
+      "bubbleName": "Entertainment",
+      "value": 2200000,
       "opposite": "HillaryClinton",
       "subcategories": [
-        "Fußball",
-        "Sport"
+        "Lifestyle",
+        "SPD",
+        "Blogger / Nachrichten",
+        "Schauspiel / Filme"
       ]
     },
     {
       "title": "BibisBeauty",
-      "bubbleName": "Sport / Fußball",
-      "value": 5075606,
+      "bubbleName": "Beauty / Fashion",
+      "value": 1450000,
       "opposite": "HillaryClinton",
       "subcategories": [
-        "Fußball",
-        "Sport"
+        "Shopping",
+        "Blogger / Nachrichten",
+        "Accessories",
+        "Schmuck",
+        "Styling / Kosmetik",
+        "Taschen",
+        "Schuhe"
       ]
     },
     {
       "title": "janboehm",
-      "bubbleName": "Sport / Fußball",
-      "value": 5075606,
+      "bubbleName": "TV",
+      "value": 2000000,
       "opposite": "HillaryClinton",
       "subcategories": [
-        "Fußball",
-        "Sport"
-      ]
+        "Politik",
+        "Lifestyle",
+        "Die Linke",
+        "Die Grünen",
+        "SPD",
+        "Poesie",
+        "Schauspiel / Filme"     ]
     },
     {
       "title": "unge",
-      "bubbleName": "Sport / Fußball",
-      "value": 5075606,
+      "bubbleName": "Gaming",
+      "value": 2000000,
       "opposite": "HillaryClinton",
       "subcategories": [
-        "Fußball",
-        "Sport"
+        "Technologie",
+        "Shooter",
+        "Strategie",
+        "Rollenspiele",
+        "Sport-/ und Rennspiele",
+        "E-Sport",
+        "Sonstige"
+
       ]
     },
     {
       "title": "thisiscro",
-      "bubbleName": "Sport / Fußball",
-      "value": 5075606,
+      "bubbleName": "Musik",
+      "value": 1800000,
       "opposite": "HillaryClinton",
       "subcategories": [
-        "Fußball",
-        "Sport"
+        "Lifestyle",
+        "Musik",
+        "Poesie"
       ]
     },
     {
       "title": "Astro_Alex",
-      "bubbleName": "Sport / Fußball",
+      "bubbleName": "Wissenschaft",
       "value": 5075606,
       "opposite": "HillaryClinton",
       "subcategories": [
@@ -72,7 +90,7 @@
     },
     {
       "title": "LeFloid",
-      "bubbleName": "Sport / Fußball",
+      "bubbleName": "Blogs",
       "value": 5075606,
       "opposite": "HillaryClinton",
       "subcategories": [
@@ -82,7 +100,7 @@
     },
     {
       "title": "dieternuhr",
-      "bubbleName": "Sport / Fußball",
+      "bubbleName": "Comedy",
       "value": 5075606,
       "opposite": "HillaryClinton",
       "subcategories": [
@@ -92,7 +110,7 @@
     },
     {
       "title": "SWagenknecht",
-      "bubbleName": "Sport / Fußball",
+      "bubbleName": "Politik national (links)",
       "value": 5075606,
       "opposite": "HillaryClinton",
       "subcategories": [
@@ -102,7 +120,7 @@
     },
     {
       "title": "TradingCryptoUS",
-      "bubbleName": "Sport / Fußball",
+      "bubbleName": "Wirtschaft",
       "value": 5075606,
       "opposite": "HillaryClinton",
       "subcategories": [
@@ -112,7 +130,7 @@
     },
     {
       "title": "Calmund",
-      "bubbleName": "Sport / Fußball",
+      "bubbleName": "Ernährung",
       "value": 5075606,
       "opposite": "HillaryClinton",
       "subcategories": [
@@ -132,7 +150,7 @@
     },
     {
       "title": "heidiklum",
-      "bubbleName": "Sport / Fußball",
+      "bubbleName": "Fashion",
       "value": 5400000,
       "opposite": "",
       "subcategories": [
