@@ -84,8 +84,9 @@
       "value": 5075606,
       "opposite": "HillaryClinton",
       "subcategories": [
-        "Fußball",
-        "Sport"
+        "Weltraum",
+        "Forschung",
+        "Physik"
       ]
     },
     {
@@ -139,13 +140,13 @@
       ]
     },
     {
-      "title": "BSchweinsteiger",
-      "bubbleName": "Sport / Fußball",
-      "value": 5075606,
-      "opposite": "HillaryClinton",
+      "title": "Alice_Weidel",
+      "bubbleName": "Politik national (rechts)",
+      "value": 50000,
+      "opposite": "SWagenknecht",
       "subcategories": [
-        "Fußball",
-        "Sport"
+        "Politik",
+        "AfD"
       ]
     },
     {
@@ -164,7 +165,11 @@
       "bubbleName": "Politik international (rechts)",
       "value": 5075606,
       "subcategories": [
-        "US"
+        "US",
+        "Politik",
+        "AfD",
+        "Wirtschaft",
+        "Weltweit"
       ]
     },
     {
@@ -173,7 +178,10 @@
       "bubbleName": "Politik international (links)",
       "value": 23100000,
       "subcategories": [
-        "Vegan"
+        "Vegan",
+        "Politik",
+        "US",
+
       ]
     }
   ]
