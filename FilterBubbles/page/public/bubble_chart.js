@@ -122,7 +122,7 @@
             twitterUt.loadTwitter(d.title);
             tooltip.html(d[columnForColors] + "<br>" + d[columnForRadius] + " Seiten");
             $('#exampleModalCenter').modal('show');
-            return tooltip.style("visibility", "visible");
+            //return tooltip.style("visibility", "visible");
         })
         /*
         .on("mousemove", function() {
